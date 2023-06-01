@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\ProjectType;
 use App\Models\SwType;
+use App\Models\Gallery;
+use Illuminate\Validation\Rule;
+
 
 class ProjectController extends Controller
 {
@@ -76,9 +80,9 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return view('projects.show', compact('project'));
-        //$swTypes = SwType::all();
-        //return view('projects.show', compact('swTypes'));
+        $galleries = Gallery::where('project_id', $project->id)->get();
+        $projectTypes = ProjectType::select('project_types.id AS project_type_id','project_types.project_id','sw_types.name')->where('project_id', $project->id)->join('sw_types', 'project_types.swtype_id', '=', 'sw_types.id')->get();
+        return view('projects.show', compact('project', 'galleries', 'projectTypes'));
     }
 
     /**
@@ -160,4 +164,71 @@ class ProjectController extends Controller
 
         return redirect()->route('projects.index')->with($status, $message);
     }
+    
+    //--------------------------------------------------------------------------
+    /**
+     * Show the form for creating a new project type.
+     *
+     * @param  \App\Models\Project  $project
+     * @return \Illuminate\Http\Response
+     */
+    public function createProjectType(Project $project)
+    {
+        $swTypes = SwType::all();
+        return view('project_types.create', compact('project', 'swTypes'));
+    }
+
+    /**
+     * Store a newly created project type in the database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Project  $project
+     * @return \Illuminate\Http\Response
+     */
+    public function storeProjectType(Request $request, Project $project)
+    {
+        try {
+
+            $data = $request->validate([
+                'swtype_id' => 'required|exists:sw_types,id',
+            ]);
+
+            $data['project_id'] = $project->id;
+            $data['swtype_id'] = $request->swtype_id;
+            $projectType = ProjectType::create($data);
+
+            $message = trans('general.success_load', ['object' => trans('project.project_types.object')]);
+            $status = 'success';
+        } catch (\Exception $e) {
+            $message = trans('general.error_load', ['object' => trans('project.project_types.object')]).$e;
+            $status = 'error';
+        }
+
+        return redirect()->route('projects.show', ['project' => $project])->with($status, $message);
+    }
+
+    /**
+     * Remove the specified project type from the database.
+     *
+     * @param  \App\Models\Project  $project
+     * @param  int  $projectType
+     * @return \Illuminate\Http\Response
+     */
+    public function destroyProjectType(Project $project, $projectType)
+    {
+        try {
+            $projectTypeModel = ProjectType::findOrFail($projectType);
+
+            $projectTypeModel->delete();
+    
+            $message = trans('general.success_destroy',['object' => trans('project.project_types.object')]);
+            $status = 'success';
+        } catch ( \Exception $e ) {
+            $message = trans('general.error_destroy',['object' => trans('project.project_types.object')]).$e;
+            $status = 'error';
+        }
+        return redirect()->route('projects.show', ['project' => $project])->with($status, $message);
+    }
+
+
 }

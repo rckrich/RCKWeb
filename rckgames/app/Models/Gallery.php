@@ -9,7 +9,7 @@ class Gallery extends Model
 {
     use HasFactory;
     protected $table = 'project_galleries';
-    protected $fillable = ['img_url'];
+    protected $fillable = ['img_url', 'project_id'];
 
     public function project()
     {

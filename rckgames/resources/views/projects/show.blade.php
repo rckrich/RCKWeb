@@ -4,20 +4,69 @@
 
 @section('content')
 <div class="container">
+    <a href="{{ route('projects.index') }}" class="btn btn-secondary mt-3">{{__('general.btn_return')}}</a>
     <h1>{{__('general.show_title',['object'=>trans('project.object')])}}</h1>
-    <div>
-        <p><strong>{{__('general.id')}}:</strong> {{ $project->id }}</p>
-        <p><strong>{{__('general.name')}}:</strong> {{ $project->name }}</p>
-        <p><strong>{{__('general.description')}}:</strong> {{ $project->description }}</p>
-        <p><strong>{{__('project.banner_img')}}:</strong></p>
-        <div><img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="img-thumbnail" width="100"></div>
-        <p><strong>{{__('project.icon_img')}}:</strong></p>
-        <div><img src="{{asset($project->icon_url) }}" alt="Icon Image" class="img-thumbnail" width="100"></div>
-        <p><strong>{{__('project.creation_date')}}:</strong> {{ $project->creation_date }}</p>
+
+    <div class="row">
+        <div class="col"><p><strong>{{__('general.id')}}:</strong> {{ $project->id }}</p></div>
+        <div class="col"><p><strong>{{__('general.name')}}:</strong> {{ $project->name }}</p></div>
+        <div class="col"><p><strong>{{__('general.description')}}:</strong> {{ $project->description }}</p></div>
+        <div class="col"><p><strong>{{__('project.banner_img')}}:</strong></p></div>
+        <div class="col"><img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="img-thumbnail" width="100"></div>
+        <div class="col"><p><strong>{{__('project.icon_img')}}:</strong></p></div>
+        <div class="col"><img src="{{asset($project->icon_url) }}" alt="Icon Image" class="img-thumbnail" width="100"></div>
+        <div class="col"><p><strong>{{__('project.creation_date')}}:</strong> {{ $project->creation_date }}</p></div>
     </div>
 
-    <a href="{{ route('projects.index') }}" class="btn btn-secondary mt-3">{{__('general.btn_return')}}</a>
 
+
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+    @if (session('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    <hr/>
+    <h2>{{__('project.galleries.title')}}:</h2>
+    <a href="{{ route('galleries.create', $project->id) }}" class="btn btn-primary">{{__('general.btn_add',['object'=>trans('project.galleries.object')])}}</a>
+    <div class="row">
+        @if(count($galleries) > 0)
+        @foreach($galleries as $gallery)
+        <div class="col">
+            <img src="{{asset($gallery->img_url) }}" alt="Gallery Image" class="img-thumbnail" width="100"/>
+            <form action="{{ route('galleries.destroy', $gallery) }}" method="POST" class="d-inline">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger" onclick="return confirm( '{{__('general.delete_confirm_msg',['object' => trans('project.galleries.object')])}}')">{{__('general.btn_delete')}}</button>
+            </form>
+        </div>
+        @endforeach
+        @else
+            <p>{{ __('No galleries found.') }}</p>
+        @endif
+    </div>
+    <hr/>
+    <h2>{{__('project.project_types.title')}}:</h2>
+    <a href="{{ route('project_types.create', $project->id) }}" class="btn btn-primary">{{__('general.btn_add',['object'=>trans('project.project_types.object')])}}</a>
+    @if(count($projectTypes) > 0)
+    @foreach($projectTypes as $projectType)
+        <div class="badge badge-primary">{{ $projectType->name }}</div>
+        <form action="{{ route('project_types.destroy', ['project' => $project, 'projectType' => $projectType->project_type_id]) }}" method="POST" class="d-inline">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger" onclick="return confirm( '{{__('general.delete_confirm_msg',['object' => trans('project.project_types.object')])}}')">{{__('general.btn_delete')}}</button>
+        </form>
+    @endforeach
+    @else
+        <p>{{ __('No types found.') }}</p>
+    @endif
 
 </div>
 @endsection

@@ -11,8 +11,13 @@ class Project extends Model
     protected $table = 'projects';
     protected $fillable = ['name', 'description', 'banner_img_url', 'icon_url', 'creation_date'];
 
-    public function swTypes()
+    public function galleries()
     {
-        return $this->belongsToMany(SwType::class, 'project_types');
+        return $this->hasMany(Gallery::class);
+    }
+
+    public function projectTypes()
+    {
+        return $this->hasMany(ProjectType::class);
     }
 }

@@ -35,7 +35,11 @@ Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->nam
 Route::prefix('projects')->group(function () {
     Route::get('{project}/galleries/create', [ProjectGalleryController::class, 'create'])->name('galleries.create');
     Route::post('{project}/galleries', [ProjectGalleryController::class, 'store'])->name('galleries.store');
-    Route::delete('{project}/galleries/{gallery}', [ProjectGalleryController::class, 'destroy'])->name('galleries.destroy');
+    Route::delete('/galleries/{gallery}', [ProjectGalleryController::class, 'destroy'])->name('galleries.destroy');
+    //Route::delete('{project}/galleries/{gallery}', [ProjectGalleryController::class, 'destroy'])->name('galleries.destroy');
+    Route::get('{project}/project_types/create', [ProjectController::class, 'createProjectType'])->name('project_types.create');
+    Route::post('{project}/project_types', [ProjectController::class, 'storeProjectType'])->name('project_types.store');
+    Route::delete('{project}/project_types/{projectType}', [ProjectController::class, 'destroyProjectType'])->name('project_types.destroy');
 });
 
 Route::get('/sw_types', [SwTypeController::class, 'index'])->name('sw_types.index');
@@ -68,3 +72,4 @@ Route::get('/rckinfo/{info}', [RCKInfoController::class, 'show'])->name('info.sh
 Route::get('/rckinfo/{info}/edit', [RCKInfoController::class, 'edit'])->name('info.edit');
 Route::put('/rckinfo/{info}', [RCKInfoController::class, 'update'])->name('info.update');
 Route::delete('/rckinfo/{info}', [RCKInfoController::class, 'destroy'])->name('info.destroy');
+

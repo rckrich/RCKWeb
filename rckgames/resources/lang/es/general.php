@@ -8,8 +8,10 @@ return [
     'nav_texts' => 'Textos de contenido',
     'nav_info' => 'Info contacto',
 
-    'btn_new' => 'Crear nuevo :Object',
+    'btn_new' => 'Crear :Object',
+    'btn_add' => 'Añadir :Object',
     'btn_create' => 'Crear',
+    'btn_load' => 'Añadir',
     'btn_view' => 'Ver',
     'btn_edit' => 'Editar',
     'btn_update' => 'Actualizar',
@@ -31,9 +33,11 @@ return [
     'delete_confirm_msg' => 'Seguro que deseas eliminar este :Object?',
 
     'success_store' => ':Object creado exitosamente.',
+    'success_load' => ':Object cargado exitosamente.',
     'success_update' => ':Object actualizado exitosamente.',
     'success_destroy' => ':Object eliminado exitosamente.',
     'error_store' => 'Ocurrió un error, por favor intente de nuevo.',
+    'error_load' => 'Ocurrió un error, por favor intente de nuevo.',
     'error_update' => 'Ocurrió un error, por favor intente de nuevo.',
     'error_destroy' => 'Ocurrió un error, por favor intente de nuevo.',
 ];
