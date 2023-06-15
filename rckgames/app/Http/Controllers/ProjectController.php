@@ -46,8 +46,8 @@ class ProjectController extends Controller
             $data = $request->validate([
                 'name' => 'required',
                 'description' => 'required',
-                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
                 'creation_date' => 'required|date',
             ]);
 
@@ -111,8 +111,8 @@ class ProjectController extends Controller
             $data = $request->validate([
                 'name' => 'required',
                 'description' => 'required',
-                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
                 'creation_date' => 'required|date',
                 //'project_types' => 'required|array',
                 //'project_types.*' => 'exists:sw_types,id',

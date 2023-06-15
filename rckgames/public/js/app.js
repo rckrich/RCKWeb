@@ -1,0 +1,67 @@
+//import './bootstrap';
+
+
+$(document).ready(function () {
+    window.addEventListener('scroll', scrollHandler)
+
+    $(".nav-link").on("click", function(){
+        $(".nav-link.active").removeClass("active");
+        $(".nav-item.active").removeClass("active");
+        $(this).addClass("active");
+        $(this).parent().addClass("active");
+    });
+});
+
+const scrollHandler = () => {
+
+    let menu = document.querySelector('.navbar');
+
+    let A = document.getElementById('dark_nav');
+    let B = document.getElementById('light_nav');
+    let C = document.getElementById('contact');
+
+    let pos_menu = window.pageYOffset + menu.offsetHeight;
+
+    let pos_A = A.offsetTop + A.offsetHeight;
+    let pos_B = B.offsetTop + B.offsetHeight;
+    let pos_C = C.offsetTop + C.offsetHeight;
+    
+    let distance_A = pos_A - pos_menu;
+    let distance_B = pos_B - pos_menu;
+    let distance_C = pos_C - pos_menu;
+
+    let min = Math.min(...[distance_A, distance_B, distance_C].filter(num => num > 0));
+
+    $('.navbar').removeClass('navbar-light') ;
+    $('.navbar').removeClass('bg-light') ;
+    $('.navbar').removeClass('navbar-dark');
+    $('.navbar').removeClass('bg-dark');
+
+    if(min === distance_A || min === distance_C){
+        $('.navbar').removeClass('navbar-light');
+        $('.navbar').removeClass('bg-light');
+        $('.navbar').addClass('navbar-dark');
+        $('.navbar').addClass('bg-dark');
+        //$('#navbarLogo').attr('src','/img/RCK_LOGO_Black.png');
+    } 
+    if(min === distance_B){
+        $('.navbar').addClass('navbar-light');
+        $('.navbar').addClass('bg-light');
+        $('.navbar').removeClass('navbar-dark');
+        $('.navbar').removeClass('bg-dark');
+        //$('#navbarLogo').attr('src','/img/RCK_LOGO_White.png');
+    } 
+
+    /*document.querySelectorAll('.navbar-nav .nav-item')[0].classList.remove('Highlight')
+    document.querySelectorAll('.navbar-nav .nav-item')[1].classList.remove('Highlight')
+    document.querySelectorAll('.navbar-nav .nav-item')[2].classList.remove('Highlight')
+
+    if(min === distance_A) document.querySelectorAll('.navbar-nav .nav-item')[0].classList.add('Highlight')
+    if(min === distance_B) document.querySelectorAll('.navbar-nav .nav-item')[1].classList.add('Highlight')
+    if(min === distance_C) document.querySelectorAll('.navbar-nav .nav-item')[2].classList.add('Highlight')*/
+    //element.scroll({left: element.offsetLeft, behavior: 'smooth'})
+
+
+}
+
+

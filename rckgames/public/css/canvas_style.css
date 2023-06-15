@@ -1,0 +1,28 @@
+/* ----------------------------------------------------------------
+	Max Width Utility Classes
+-----------------------------------------------------------------*/
+
+.mw-xs {
+	max-width: 36rem !important;
+}
+
+.mw-sm {
+	max-width: 48rem !important;
+}
+
+.mw-md {
+	max-width: 64rem !important;
+}
+
+.mw-lg {
+	max-width: 78rem !important;
+}
+
+.mw-xl {
+	max-width: 88rem !important;
+}
+
+.mw-xxl {
+	max-width: 100rem !important;
+}
+

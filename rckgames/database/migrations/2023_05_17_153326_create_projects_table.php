@@ -16,7 +16,7 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->string('banner_img_url');
             $table->string('icon_url');
             $table->date('creation_date');

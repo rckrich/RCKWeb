@@ -1,5 +1,5 @@
 <!-- clients/create.blade.php -->
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <h1>{{__('general.create_title',['object'=>trans('client.object')])}}</h1>

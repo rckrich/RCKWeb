@@ -16,7 +16,7 @@ class CreateTextsTable extends Migration
         Schema::create('texts', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('textname');
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }

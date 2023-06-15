@@ -1,0 +1,61 @@
+<?php
+
+return [
+    'services' => [
+        'videogame' => [
+            'title' => 'Desarrollo de Videojuegos',
+            'description' => 'Desde móviles hasta juegos para Roblox. Trabajamos en entornos 2D y 3D para PC, móviles y otras plataformas.',
+            'desc_1' => 'Diseño del estilo visual del juego o IP',
+            'desc_2' => 'Diseño de UI/UX',
+            'desc_3' => 'Diseño visual y funcional de niveles',
+            'desc_4' => 'Desarrollo de mecánicas',
+            'desc_5' => 'Implementación del juego',
+            'desc_6' => 'Publicación en plataformas móviles AppStore y PlayStore',
+            'desc_7' => 'Planeación & Documentación base del juego',
+        ],
+        'mobile' => [
+            'title' => 'Apps Móviles',
+            'description' => 'Desde el concepto hasta la publicación en tiendas digitales.',
+            'desc_1' => 'Diseño e identidad visual de la App',
+            'desc_2' => 'Diseño UX/UI',
+            'desc_3' => 'Creación del flujo de la aplicación',
+            'desc_4' => 'Programación por módulos',
+            'desc_5' => 'Integración de funciones de Realidad Aumentada',
+            'desc_6' => 'Compatibilidad con iOS y Android',
+            'desc_7' => 'Publicación de la aplicación en la AppStore y PlayStore',
+        ],
+        'webapp' => [        
+            'title' => 'Desarrollo Web',
+            'description' => 'Creación de prototipos visuales, diseño y  desarrollo modular, montaje en servidor y mantenimiento del Sitio Web.',
+            'desc_1' => 'Diseño e identidad visual del sitio Web',
+            'desc_2' => 'Diseño UI/UX',
+            'desc_3' => 'Creación del flujo web',
+            'desc_4' => 'Desarrollo modular',
+            'desc_5' => 'Herramienta de administrador web',
+            'desc_6' => 'Integración con aplicaciones móviles',
+            'desc_7' => 'Hosting y dominio con certificado SSL',
+            'desc_8' => 'Exploración de mediante prototipos visuales y/o funcionales',
+        ],
+        'design' => [        
+            'title' => 'Ilustración',
+            'description' => 'Concept y Diseño para proyectos de Videojuegos, Cómic o Animación.',
+            'desc_1' => 'Concept Art',
+            'desc_2' => 'Diseño de personajes',
+            'desc_3' => 'Turn arounds',
+            'desc_4' => 'Character Sheets',
+            'desc_5' => 'Fondos',
+            'desc_6' => 'Visual keys',
+            'desc_7' => 'Creación de props',
+        ],
+        'ar' => [
+            'title' => 'Realidad Aumentada y Virtual',
+            'description' => 'Creamos nuevas experiencias para llevar un paso mas allá cada proyecto.',
+            'desc_1' => 'Tours Virtuales',
+            'desc_2' => 'Producción de marcadores y contenido para Realidad Aumentada',
+            'desc_3' => 'Creación de Experiencias Virtuales',
+        ], 
+    ],
+    'galleries' => [
+        'title' => 'Galería del proyecto',
+    ],
+];

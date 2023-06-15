@@ -1,24 +1,34 @@
 <!-- resources/views/projects/show.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-<div class="container">
-    <a href="{{ route('projects.index') }}" class="btn btn-secondary mt-3">{{__('general.btn_return')}}</a>
+<div class="container py-5">
     <h1>{{__('general.show_title',['object'=>trans('project.object')])}}</h1>
+    <div class="row pb-3">
+        <div class="col-lg-5 col-md-5 col-sm-12 col-12 p-4">
+            <strong>{{__('project.banner_img')}}:</strong>
+            <img id="project-banner" src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100">                    
+            <a href="{{ route('projects.index') }}" class="btn btn-secondary mt-3">{{__('general.btn_return')}}</a>
 
-    <div class="row">
-        <div class="col"><p><strong>{{__('general.id')}}:</strong> {{ $project->id }}</p></div>
-        <div class="col"><p><strong>{{__('general.name')}}:</strong> {{ $project->name }}</p></div>
-        <div class="col"><p><strong>{{__('general.description')}}:</strong> {{ $project->description }}</p></div>
-        <div class="col"><p><strong>{{__('project.banner_img')}}:</strong></p></div>
-        <div class="col"><img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="img-thumbnail" width="100"></div>
-        <div class="col"><p><strong>{{__('project.icon_img')}}:</strong></p></div>
-        <div class="col"><img src="{{asset($project->icon_url) }}" alt="Icon Image" class="img-thumbnail" width="100"></div>
-        <div class="col"><p><strong>{{__('project.creation_date')}}:</strong> {{ $project->creation_date }}</p></div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-12 col-12 p-4">
+            <div class="row">
+                <div class="col-2">
+                    <strong>{{__('project.icon_img')}}:</strong>
+                    <img id="project-icon" src="{{asset($project->icon_url) }}" alt="Icon Image" class="w-100">
+                </div>
+                <div class="col">
+                    <h2 id="project-name"><strong>{{__('general.name')}}: </strong>{{ $project->name }}</h2>    
+                </div>
+            </div>
+            <div class="row py-5">
+                <p><strong>{{__('general.id')}}: </strong> {{ $project->id }}</p>
+                <p class="project-description"><strong>{{__('general.description')}}: </strong>{{ $project->description }}</p>
+                <p><strong>{{__('project.creation_date')}}:</strong> {{ $project->creation_date }}</p>
+            </div>
+        </div>
     </div>
-
-
 
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">

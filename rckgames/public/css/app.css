@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Poppins";
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format("truetype");
+}
+
+body{
+    background-color: #f8f9fa;
+    font-family: 'Poppins', Arial;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+.text,.card-subtitle,.card-body u li,.project-description{
+    font-family: 'Open Sans', Arial ;
+}
+
+.navbar{font-size: 15px;font-weight: 500 ;height: 100px;}
+.navbar-brand img{width: 77px; height: 77px;}
+.bg-light{background-color: #fff!important; color: #000!important;}
+.bg-dark{background-color: #000!important; color: #fff!important;}
+.navbar-light{border-bottom: solid 1px #000;}
+.navbar-dark{border-bottom: solid 1px #fff;}
+.navbar-light .be-solid-bnw{border-right: solid 1px #000;}
+.navbar-dark .be-solid-bnw{border-right: solid 1px #fff;}
+.navbar-light .navbar-brand img{
+    filter: invert(0);
+}
+.navbar-dark .navbar-brand img{
+    filter: invert(1);
+}
+.nav-item{
+    font-size: 15px ;
+    font-weight: 500 ;
+}
+.navbar-light.nav-link,.navbar-light a:hover,.navbar-light .nav-item.active a.nav-link{ color: #000!important;}
+.navbar-dark.nav-link,.navbar-dark a:hover,.navbar-dark .nav-item.active a.nav-link{ color: #fff!important;}
+.nav-item.active{border-bottom: solid 2px;}
+
+.pt-nav{padding-top: 100px;}
+
+.be-solid-white{border-right: solid 2px #fff;}
+
+h1{font-size: 30px;}
+h2{font-size: 26px;}
+h3,p{font-size: 20px;}
+.title{text-align: center; font-weight: 600;}
+.title.py-5{padding: 5rem 0!important;}
+.title.pb-5{padding: 0 0 5rem 0!important;}
+.subtitle,.quote,.card-title{font-size: 22px;}
+.text{
+    color: #737c84;
+    font-size: 20px ;
+    font-weight: 400 ;
+    line-height: 30px ;
+    text-align: justify;}
+.quote{text-align: center;}
+.card-title{
+    height: 3rem;
+}
+.card-subtitle{
+    font-size: 15px ;
+    font-weight: 400 ;
+    line-height: 26px ;
+    color: #737c84 ;
+}
+.card-body ul li{
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: 26px ;
+    text-decoration: none!important;
+    
+}
+.flip-card-front> .card-body ul li{color: #fff;}
+.flip-card-back>.card-body ul li{color: #737c84 ;}
+.card-header {
+    background-color: transparent!important; 
+    border-bottom: none!important;
+}
+
+
+/*LANDING*/
+#index{
+    background: url(https://rckgames.com/wp-content/uploads/2020/04/fondo_Prueba1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    width: 100vw;
+    height: 100vh;
+}
+#services{background-color: #f8f9fa; min-height: 100vh;}
+#projects,#us{background-color: #fff;}
+#us{min-height: 100vh;}
+#contact,footer{background-color: #000!important; color: #fff!important;}
+#contact .title{background-color: #000;}
+#contact .text{color: #96a1ab;}
+
+
+/*PROJECT DETAILS*/
+#view_project{min-height: 100vh;}
+#project-banner{border-radius: 12px ;}
+#project-icon{border-radius: 10px ;}
+
+#project-title {
+    font-weight: 500;
+    color: #000;
+}
+.project-description{
+    font-size: 15px ;
+    font-weight: 400 ;
+    line-height: 29px ;
+    color: #737c84 ;
+}

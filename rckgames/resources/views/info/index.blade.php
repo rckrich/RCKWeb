@@ -1,6 +1,6 @@
 <!-- resources/views/info/index.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <div class="container">
@@ -36,7 +36,7 @@
                         <td>{{ $data->id }}</td>
                         <td>{{ $data->fieldname }}</td>
                         <td>{{ $data->value }}</td>
-                        <td><img src="{{$data->img_url }}" alt="Info Image" class="img-thumbnail" width="100"></td>
+                        <td><img src="{{asset($data->img_url) }}" alt="Info Image" class="img-thumbnail" width="100"></td>
                         <td>
                             <a href="{{ route('info.show', $data->id) }}" class="btn btn-info">{{__('general.btn_view')}}</a>
                             <a href="{{ route('info.edit', $data->id) }}" class="btn btn-primary">{{__('general.btn_edit')}}</a>

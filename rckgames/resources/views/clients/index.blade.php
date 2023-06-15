@@ -1,5 +1,5 @@
 <!-- clients/index.blade.php -->
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <h1>{{__('client.title')}}</h1>
@@ -30,7 +30,7 @@
             @foreach ($clients as $client)
                 <tr>
                     <td>{{ $client->id }}</td>
-                    <td><img src="{{$client->img_url }}" alt="Client Image" class="img-thumbnail" width="100"></td>
+                    <td><img src="{{asset($client->img_url) }}" alt="Client Image" class="img-thumbnail" width="100"></td>
                     <td>
                         <a href="{{ route('clients.edit', $client) }}" class="btn btn-primary">{{__('general.btn_edit')}}</a>
                         <form action="{{ route('clients.destroy', $client) }}" method="POST" class="d-inline">

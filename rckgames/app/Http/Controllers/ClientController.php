@@ -23,7 +23,7 @@ class ClientController extends Controller
     {
         try{
             $data = $request->validate([
-                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
             ]);
     
             $imgUrl = $data['img_url']->store('public/images/clients');
@@ -48,7 +48,7 @@ class ClientController extends Controller
     {
         try{
             $data = $request->validate([
-                'img_url' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'img_url' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
             ]);
 
             if (isset($data['img_url'])) {

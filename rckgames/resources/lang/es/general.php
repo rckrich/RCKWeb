@@ -2,8 +2,12 @@
 
 return [
     'admin_title'=>'RCKGames - Panel Administrador',
+    'nav_index' => 'Inicio',
+    'nav_services' => 'Servicios',
     'nav_projects' => 'Proyectos',
     'nav_clients' => 'Clientes',
+    'nav_us' => 'Nosotros',
+    'nav_contact' => 'Contacto',
     'nav_swtypes' => 'Tipos de proyecto',
     'nav_texts' => 'Textos de contenido',
     'nav_info' => 'Info contacto',
@@ -40,4 +44,5 @@ return [
     'error_load' => 'Ocurrió un error, por favor intente de nuevo.',
     'error_update' => 'Ocurrió un error, por favor intente de nuevo.',
     'error_destroy' => 'Ocurrió un error, por favor intente de nuevo.',
+
 ];

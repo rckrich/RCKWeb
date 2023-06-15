@@ -1,6 +1,6 @@
 <!-- resources/views/projects/index.blade.php -->
 
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <h1>{{__('project.title')}}</h1>
@@ -35,8 +35,8 @@
                     <td>{{ $project->id }}</td>
                     <td>{{ $project->name }}</td>
                     <td>{{ $project->description }}</td>
-                    <td><img src="{{$project->banner_img_url }}" alt="Banner Image" class="img-thumbnail" width="100"></td>
-                    <td><img src="{{$project->icon_url }}" alt="Icon Image" class="img-thumbnail" width="100"></td>
+                    <td><img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="img-thumbnail" width="100"></td>
+                    <td><img src="{{asset($project->icon_url) }}" alt="Icon Image" class="img-thumbnail" width="100"></td>
                     <td>{{ $project->creation_date }}</td>
                     <td>
                         <a href="{{ route('projects.show', $project) }}" class="btn btn-info">{{__('general.btn_view')}}</a>

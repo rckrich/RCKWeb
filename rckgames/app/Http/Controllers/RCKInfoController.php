@@ -24,7 +24,7 @@ class RCKInfoController extends Controller
            $data = $request->validate([
                 'fieldname' => 'required',
                 'value' => 'required',
-                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
             ]);
 
             $imgUrl = $data['img_url']->store('public/images/info');
@@ -57,7 +57,7 @@ class RCKInfoController extends Controller
             $data = $request->validate([
                 'fieldname' => 'required',
                 'value' => 'required',
-                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
             ]);
 
             if (isset($data['img_url'])) {

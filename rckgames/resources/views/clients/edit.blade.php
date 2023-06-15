@@ -1,5 +1,5 @@
 <!-- clients/edit.blade.php -->
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <h1>{{__('general.edit_title',['object'=>trans('client.object')])}}</h1>
