@@ -2,7 +2,15 @@
 
 
 $(document).ready(function () {
-    window.addEventListener('scroll', scrollHandler)
+    if(location.pathname.includes('/projects/') || location.pathname.includes('/login') || location.pathname.includes('/register')){
+        $('.navbar').removeClass('navbar-light');
+        $('.navbar').removeClass('bg-light');
+        $('.navbar').addClass('navbar-dark');
+        $('.navbar').addClass('bg-dark');
+    }
+    else{
+        window.addEventListener('scroll', scrollHandler)
+    }
 
     $(".nav-link").on("click", function(){
         $(".nav-link.active").removeClass("active");

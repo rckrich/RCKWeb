@@ -44,5 +44,11 @@ return [
     'error_load' => 'Ocurrió un error, por favor intente de nuevo.',
     'error_update' => 'Ocurrió un error, por favor intente de nuevo.',
     'error_destroy' => 'Ocurrió un error, por favor intente de nuevo.',
+    
+    'session' => [
+        'logout' => 'Cerrar sesión',
+    ]
+
+
 
 ];

@@ -277,7 +277,8 @@
 }
 
 .owl-carousel .owl-nav [class*=owl-]:hover {
-	background-color: #1ABC9C !important;
+	/*background-color: #1ABC9C !important;*/
+	background-color: #CACBCC !important;
 	color: #FFF !important;
 	text-decoration: none;
 }
@@ -525,7 +526,8 @@
 }
 
 .owl-carousel .owl-nav [class*=owl-]:hover {
-	background-color: var(--owl-nav-bg) !important;
+	/*background-color: var(--owl-nav-bg) !important;*/
+	background-color: #CACBCC !important;
 }
 
 .slider-element .owl-nav [class*=owl-],

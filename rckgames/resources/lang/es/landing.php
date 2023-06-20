@@ -57,5 +57,6 @@ return [
     ],
     'galleries' => [
         'title' => 'Galería del proyecto',
+        'not_found' => 'No se cuenta con imágenes actualmente.',
     ],
 ];

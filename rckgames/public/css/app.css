@@ -1,6 +1,14 @@
 @font-face {
     font-family: "Poppins";
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins SemiBold";
     src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Poppins Medium";
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format("truetype");
 }
 
 @font-face {
@@ -8,17 +16,31 @@
     src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format("truetype");
 }
 
+.icon-angle-left,.icon-angle-right{
+    display: inline-block;
+    background-position: center!important; 
+    background-size: cover!important;
+    width: var(--owl-nav-sizes);
+    height: var(--owl-nav-sizes);   
+}
+.icon-angle-left{background: url('../icons/PreviousButton@1x.png') no-repeat;}
+.icon-angle-right{background: url('../icons/NextButton@1x.png') no-repeat;}
+
 body{
     background-color: #f8f9fa;
     font-family: 'Poppins', Arial;
     max-width: 100vw;
     overflow-x: hidden;
 }
-.text,.card-subtitle,.card-body u li,.project-description{
+h1,h3,.card-title, #contact .subtitle{
+    font-family: 'Poppins SemiBold', Arial ;
+}
+.quote, #contact h1,#project-name{font-family: 'Poppins Medium', Arial;}
+.text,.card-subtitle,.card-body ul li,.project-description,.badge{
     font-family: 'Open Sans', Arial ;
 }
 
-.navbar{font-size: 15px;font-weight: 500 ;height: 100px;}
+.navbar{font-size:15px;font-weight: 500;height: 100px;}
 .navbar-brand img{width: 77px; height: 77px;}
 .bg-light{background-color: #fff!important; color: #000!important;}
 .bg-dark{background-color: #000!important; color: #fff!important;}
@@ -58,8 +80,12 @@ h3,p{font-size: 20px;}
     line-height: 30px ;
     text-align: justify;}
 .quote{text-align: center;}
-.card-title{
+.flip-card-front .card-title{
     height: 3rem;
+}
+.flip-card-back .card-title{
+    font-size: 16px;
+    color: #fff;
 }
 .card-subtitle{
     font-size: 15px ;
@@ -84,11 +110,11 @@ h3,p{font-size: 20px;}
 
 /*LANDING*/
 #index{
-    background: url(https://rckgames.com/wp-content/uploads/2020/04/fondo_Prueba1.png) no-repeat;
+    background: url('../img/Banner.webp') no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment:fixed;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 #services{background-color: #f8f9fa; min-height: 100vh;}
@@ -100,7 +126,7 @@ h3,p{font-size: 20px;}
 
 
 /*PROJECT DETAILS*/
-#view_project{min-height: 100vh;}
+#view_project,#login,#register{min-height: 100vh;}
 #project-banner{border-radius: 12px ;}
 #project-icon{border-radius: 10px ;}
 

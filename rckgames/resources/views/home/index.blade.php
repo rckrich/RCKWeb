@@ -36,6 +36,9 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('icons/videogame-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<div class="col-12 mx-0 px-0">										
+										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.videogame.title')}}</h3>
+									</div>
 									<ul class="mb-2 text-white">
 										<li>{{__('landing.services.videogame.desc_1')}}</li>
 										<li>{{__('landing.services.videogame.desc_2')}}</li>
@@ -73,6 +76,9 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('icons/mobile-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<div class="col-12 mx-0 px-0">										
+										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.mobile.title')}}</h3>
+									</div>
 									<ul class="mb-2 text-white">
 										<li>{{__('landing.services.mobile.desc_1')}}</li>
 										<li>{{__('landing.services.mobile.desc_2')}}</li>
@@ -110,6 +116,9 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('icons/webapp-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<div class="col-12 mx-0 px-0">										
+										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.webapp.title')}}</h3>
+									</div>
 									<ul class="mb-2 text-white">
 										<li>{{__('landing.services.webapp.desc_1')}}</li>
 										<li>{{__('landing.services.webapp.desc_2')}}</li>
@@ -148,6 +157,9 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('icons/design-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<div class="col-12 mx-0 px-0">										
+										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.design.title')}}</h3>
+									</div>
 									<ul class="mb-2 text-white">
 										<li>{{__('landing.services.design.desc_1')}}</li>
 										<li>{{__('landing.services.design.desc_2')}}</li>
@@ -185,6 +197,9 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('icons/ar-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<div class="col-12 mx-0 px-0">										
+										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.ar.title')}}</h3>
+									</div>
 									<ul class="mb-2 text-white">
 										<li>{{__('landing.services.ar.desc_1')}}</li>
 										<li>{{__('landing.services.ar.desc_2')}}</li>
@@ -203,12 +218,33 @@
 	<section id="projects">
 		<div class="title py-5 bg_white"><h1>{{$texts->firstWhere('textname', 'section_projects_title')['description'];}}</h1></div>
 		<div class="row mx-0 px-0">
+			<div class="grid-filter-wrap">
+				<ul class="grid-filter style-2 mx-auto" data-container="#portfolio">
+					<li class="activeFilter"><a href="#" data-filter="*">Todo</a></li>
+				@foreach ($swTypes as $swType)
+					<li><a href="#" data-filter="{{'.'.str_replace(' ','_',$swType->name)}}">{{$swType->name}}</a></li>
+				@endforeach
+				</ul>
+			</div>
+		</div>
+		<div id="portfolio" class="portfolio row grid-container mx-0 px-0 g-0">
 		@foreach ($projects as $project)
-			<div class="col-lg-3 col-md-4 col-sm-4 col-6 p-0">
-				<a href="{{ route('projects.showp', $project) }}">
-					<img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100 h-100"> 
-				</a>
-			</div>                  
+			<article class="portfolio-item col-lg-3 col-md-4 col-sm-4 col-6 p-0 {{$project->tags}}">
+				<div class="grid-inner">
+					<a href="{{ route('projects.showp', $project) }}">
+						<img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100 h-100"> 
+					</a>
+					<div class="bg-overlay">
+						<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+							<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+								<h3><a href="{{ route('projects.showp', $project) }}">{{$project->name}}</a></h3>
+							</div>
+						</div>
+						<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+					</div>
+				</div>
+			</article>  
+
 		@endforeach
 		</div>
 	</section>

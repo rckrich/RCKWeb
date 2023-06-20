@@ -3,7 +3,6 @@
 @extends('layouts.landing')
 
 @section('content')
-<section id="dark_nav">
 <section id="view_project" class="row px-0 py-5 mx-0 align-items-center" data-big="2" data-lightbox="gallery">
 <div class="container mw-xl">
     <div class="row pb-5">
@@ -16,10 +15,10 @@
                     <img id="project-icon" src="{{asset($project->icon_url) }}" alt="Icon Image" class="w-100">
                 </div>
                 <div class="col">
-                    <h2 id="project-banner">{{ $project->name }}</h2>
+                    <h2 id="project-name">{{ $project->name }}</h2>
                      @if(count($projectTypes) > 0)
                         @foreach($projectTypes as $projectType)
-                            <div class="badge badge-primary bg-black">{{ $projectType->name }}</div>
+                            <div class="badge badge-primary bg-black py-2">{{ $projectType->name }}</div>
                         @endforeach    
                     @endif
                 </div>
@@ -30,7 +29,7 @@
         </div>
     </div>
     <div class="row p-4">
-        <h2 class="px-0">{{__('landing.galleries.title')}}:</h2>
+        <h2 class="px-0">{{__('landing.galleries.title')}}</h2>
         <div class="row mx-0 px-0 py-5 max-height-gallery">
             @if(count($galleries) > 0)
             @foreach($galleries as $gallery)
@@ -41,13 +40,10 @@
             </div>
             @endforeach
             @else
-                <p>{{ __('No galleries found.') }}</p>
+                <p class="px-0">{{__('landing.galleries.not_found')}}</p>
             @endif
         </div>
     </div>
 </div>
 </section>
-</section>
-<section id="light_nav"></section>
-<section id="contact"></section>
 @endsection

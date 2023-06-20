@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ route('projects.index') }}">{{__('general.admin_title')}}</a>
+        <a class="navbar-brand" href="{{ route('home.index') }}">{{__('general.admin_title')}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,6 +30,12 @@
                 </li>
                 <li class="nav-item {{ request()->routeIs('info.index') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('info.index') }}">{{__('general.nav_info')}}</a>
+                </li>
+                <li class="nav-item">
+                    <form action="{{ route('auth.logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-danger" type="submit">{{__('general.session.logout')}}</button>
+                    </form>
                 </li>
             </ul>
         </div>

@@ -27,22 +27,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item {{ request()->routeIs('home.index') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{route('home.index')}}">{{__('general.nav_index')}}</a>
+                        <a class="nav-link link link-10" href="{{route('home.index')}}">{{__('general.nav_index')}}</a>
                     </li>
                     <li class="nav-item {{ request()->routeIs('home.services') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{route('home.services')}}">{{__('general.nav_services')}}</a>
+                        <a class="nav-link link link-10" href="{{route('home.services')}}">{{__('general.nav_services')}}</a>
                     </li>
                     <li class="nav-item {{ request()->routeIs('home.projects') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{route('home.projects')}}">{{__('general.nav_projects')}}</a>
+                        <a class="nav-link link link-10" href="{{route('home.projects')}}">{{__('general.nav_projects')}}</a>
                     </li>
                     <li class="nav-item {{ request()->routeIs('home.clients') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{route('home.clients')}}">{{__('general.nav_clients')}}</a>
+                        <a class="nav-link link link-10" href="{{route('home.clients')}}">{{__('general.nav_clients')}}</a>
                     </li>
                     <li class="nav-item {{ request()->routeIs('home.us') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{route('home.us')}}">{{__('general.nav_us')}}</a>
+                        <a class="nav-link link link-10" href="{{route('home.us')}}">{{__('general.nav_us')}}</a>
                     </li>
                     <li class="nav-item {{ request()->routeIs('home.contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{route('home.contact')}}">{{__('general.nav_contact')}}</a>
+                        <a class="nav-link link link-10" href="{{route('home.contact')}}">{{__('general.nav_contact')}}</a>
                     </li>
                 </ul>
             </div>
@@ -51,9 +51,32 @@
         @yield('content')
     <div>
     <footer>
-        <div class="container py-5 text-center">
+        <div class="p-5 text-center">
             <img id="" src="{{asset('img/RCK_LOGO_Black.png')}}" alt="RCK Logo" class="" height="77" width="77"/>
-            <p class="">{{$texts->firstWhere('textname', 'footer_text')['description'];}}</p>
+            <div class="row mx-0 px-0">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12 offset-lg-4 align-self-center py-2">
+                    <p class="my-auto">{{$texts->firstWhere('textname', 'footer_text')['description'];}}</p>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-12 align-self-center py-2">
+                    <div class="row my-auto">
+                        <div class="col-lg-1 col me-3 ms-auto">
+                            <a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
+                                <img src="{{$info->firstWhere('fieldname', 'facebook')['img_url'];}}" height="42" width="42"/>
+                            </a>
+                        </div>
+                        <div class="col-lg-1 col mx-3">
+                            <a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
+                                <img src="{{$info->firstWhere('fieldname', 'twitter')['img_url'];}}" height="42" width="42"/>
+                            </a>
+                        </div>
+                        <div class="col-lg-1 col mx-3">
+                            <a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
+                                <img src="{{$info->firstWhere('fieldname', 'instagram')['img_url'];}}" height="42" width="42"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
