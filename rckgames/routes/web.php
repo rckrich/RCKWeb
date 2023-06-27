@@ -21,8 +21,10 @@ use App\Http\Controllers\LandingController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 //Route::prefix('/')->group(function () {
-    Route::get('/', [LandingController::class, 'index'])->name('home.index');
+    Route::get('/', [LandingController::class, 'index'])->name('home');
     Route::get('/#index', [LandingController::class, 'index'])->name('home.index');
     Route::get('/#services', [LandingController::class, 'index'])->name('home.services');
     Route::get('/#projects', [LandingController::class, 'index'])->name('home.projects');

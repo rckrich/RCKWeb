@@ -34,9 +34,21 @@
             @if(count($galleries) > 0)
             @foreach($galleries as $gallery)
             <div class="col-4 p-0 m-0">
+                @if(Str::endsWith($gallery->img_url, ['.jpg', '.jpeg', '.png', '.gif']))
                 <a class="grid-item" href="{{asset($gallery->img_url) }}" data-lightbox="gallery-item" >
                     <img src="{{asset($gallery->img_url) }}" alt="Gallery Image" class="gallery-img w-100 h-100" />
                 </a>
+                @elseif(Str::endsWith($gallery->img_url, ['.mp4', '.mov', '.avi', '.mkv']))
+                <a class="grid-item" href="{{asset($gallery->img_url) }}" data-lightbox="iframe" >
+                    <!--img src="{{asset($gallery->img_url) }}" alt="Youtube Video" style="box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15); border-radius: 6px;">
+                    <i class="bi-play" style="position: absolute; top: 50%; left: 50%; font-size: 60px; color: #FFF; margin-top: -45px; margin-left: -23px"></i-->
+                    <video  class="gallery-img w-100 h-100">
+                        <source src="{{ asset($gallery->img_url)}}" type="video/mp4">
+                        <!-- Add additional <source> tags for other video formats if needed -->
+                        Your browser does not support the video tag.
+                    </video> 
+                </a>
+                @endif
             </div>
             @endforeach
             @else

@@ -31,8 +31,9 @@ class ProjectGalleryController extends Controller
     {
        
         try{
+            //$mimeType = $request->img_url->getMimeType();
             $data = $request->validate([
-                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'img_url' => 'required|file|mimetypes:jpeg,png,jpg,gif,svg,webp,video/mp4,video/mov,video/avi,video/mpeg,video/quicktime|max:1048576',
             ]);
             $imgUrl = $data['img_url']->store('public/images/gallery');
             $data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
@@ -44,7 +45,7 @@ class ProjectGalleryController extends Controller
             $status = 'success';
          
         } catch ( \Exception $e ) {
-            $message = trans('general.error_load',['object' => trans('project.galleries.object')]).$e->getMessage();
+            $message = trans('general.error_load',['object' => trans('project.galleries.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('projects.show', $project)->with($status, $message);

@@ -309,17 +309,17 @@
 				<div class="row mt-5">
 					<div class="col-1 me-3">
 						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
-							<img src="{{$info->firstWhere('fieldname', 'facebook')['img_url'];}}" height="42" width="42"/>
+							<img src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
 					<div class="col-1 mx-3">
 						<a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
-							<img src="{{$info->firstWhere('fieldname', 'twitter')['img_url'];}}" height="42" width="42"/>
+							<img src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
 					<div class="col-1 mx-3">
 						<a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
-							<img src="{{$info->firstWhere('fieldname', 'instagram')['img_url'];}}" height="42" width="42"/>
+							<img src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
 				</div>

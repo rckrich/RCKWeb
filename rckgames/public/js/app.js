@@ -2,6 +2,29 @@
 
 
 $(document).ready(function () {
+    handleURL();
+    window.addEventListener('hashchange', function() { handleURL();});
+    window.addEventListener('popstate', function() {handleURL();});
+
+    location.hash ? toggleLink(location.hash.replace('#','')) : '';
+    
+    $(".nav-link").on("click", function(){
+        $(".nav-link.active").removeClass("active");
+        $(".nav-item.active").removeClass("active");
+        $(this).addClass("active");
+        $(this).parent().addClass("active");
+    });
+
+});
+
+function toggleLink (routeID) {
+    $(".nav-link.active").removeClass("active");
+    $(".nav-item.active").removeClass("active");
+    $("#nav_"+routeID).addClass("active");
+    $("#nav_"+routeID).parent().addClass("active");
+}
+
+function handleURL () {
     if(location.pathname.includes('/projects/') || location.pathname.includes('/login') || location.pathname.includes('/register')){
         $('.navbar').removeClass('navbar-light');
         $('.navbar').removeClass('bg-light');
@@ -9,16 +32,10 @@ $(document).ready(function () {
         $('.navbar').addClass('bg-dark');
     }
     else{
+        scrollHandler
         window.addEventListener('scroll', scrollHandler)
     }
-
-    $(".nav-link").on("click", function(){
-        $(".nav-link.active").removeClass("active");
-        $(".nav-item.active").removeClass("active");
-        $(this).addClass("active");
-        $(this).parent().addClass("active");
-    });
-});
+}
 
 const scrollHandler = () => {
 
