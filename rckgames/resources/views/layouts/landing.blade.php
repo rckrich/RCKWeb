@@ -19,11 +19,11 @@
             <div class="row col-lg-2 col-md-4 col-sm-4 col-4 be-solid-bnw">
                 @if(Auth::check())
                 <a class="navbar-brand text-center" href="{{ route('projects.index') }}">
-                    <img  id="navbarLogo" src="{{asset('img/RCK_Logo.svg')}}" alt="RCK Logo" height="77" width="77"/>
+                    <img  id="navbarLogo" src="{{asset('assets/img/RCK_Logo.svg')}}" alt="RCK Logo" height="77" width="77"/>
                 </a>
                 @else
                 <a class="navbar-brand text-center" href="{{ route('home.index') }}">
-                    <img  id="navbarLogo" src="{{asset('img/RCK_Logo.svg')}}" alt="RCK Logo" height="77" width="77"/>
+                    <img  id="navbarLogo" src="{{asset('assets/img/RCK_Logo.svg')}}" alt="RCK Logo" height="77" width="77"/>
                 </a>
                 @endif
             </div>
@@ -58,24 +58,24 @@
     <div>
     <footer>
         <div class="p-5 text-center">
-            <img id="" src="{{asset('img/RCK_LOGO_Black.png')}}" alt="RCK Logo" class="" height="77" width="77"/>
+            <img id="" src="{{asset('assets/img/RCK_LOGO_Black.png')}}" alt="RCK Logo" class="" height="77" width="77"/>
             <div class="row mx-0 px-0">
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 offset-lg-4 align-self-center py-2">
                     <p class="my-auto">{{$texts->firstWhere('textname', 'footer_text')['description'];}}</p>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 align-self-center py-2">
                     <div class="row my-auto">
-                        <div class="col-lg-1 col me-3 ms-auto">
+                        <div class="col-lg-1 col me-3 ms-auto my-auto">
                             <a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
                                 <img src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url'])}}" height="42" width="42"/>
                             </a>
                         </div>
-                        <div class="col-lg-1 col mx-3">
+                        <div class="col-lg-1 col mx-3 my-auto">
                             <a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
-                                <img src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url'])}}" height="42" width="42"/>
+                                <img src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url'])}}" height="35" width="43"/>
                             </a>
                         </div>
-                        <div class="col-lg-1 col mx-3">
+                        <div class="col-lg-1 col mx-3 my-auto">
                             <a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
                                 <img src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url'])}}" height="42" width="42"/>
                             </a>

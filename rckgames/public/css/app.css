@@ -23,8 +23,8 @@
     width: var(--owl-nav-sizes);
     height: var(--owl-nav-sizes);   
 }
-.icon-angle-left{background: url('../icons/PreviousButton@1x.png') no-repeat;}
-.icon-angle-right{background: url('../icons/NextButton@1x.png') no-repeat;}
+.icon-angle-left{background: url('../assets/icons/PreviousButton@1x.png') no-repeat;}
+.icon-angle-right{background: url('../assets/icons/NextButton@1x.png') no-repeat;}
 
 body{
     background-color: #f8f9fa;
@@ -40,14 +40,15 @@ h1,h3,.card-title, #contact .subtitle{
     font-family: 'Open Sans', Arial ;
 }
 
-.navbar{font-size:15px;font-weight: 500;height: 100px;}
+.navbar{font-size:15px;font-weight: 500;height: 100px;padding-right: 30px!important;}
+.navbar-brand {height: 100px;}
 .navbar-brand img{width: 77px; height: 77px;}
 .bg-light{background-color: #fff!important; color: #000!important;}
 .bg-dark{background-color: #000!important; color: #fff!important;}
-.navbar-light{border-bottom: solid 1px #000;}
-.navbar-dark{border-bottom: solid 1px #fff;}
-.navbar-light .be-solid-bnw{border-right: solid 1px #000;}
-.navbar-dark .be-solid-bnw{border-right: solid 1px #fff;}
+.navbar-light{border-bottom: solid 0.5px #D9D9D9;}
+.navbar-dark{border-bottom: solid 0.5px #EFEFEF;}
+.navbar-light .be-solid-bnw{border-right: solid 0.5px #D9D9D9;}
+.navbar-dark .be-solid-bnw{border-right: solid 0.5px #EFEFEF;}
 .navbar-light .navbar-brand img{
     filter: invert(0);
 }
@@ -61,7 +62,12 @@ h1,h3,.card-title, #contact .subtitle{
 .navbar-light.nav-link,.navbar-light a:hover,.navbar-light .nav-item.active a.nav-link{ color: #000!important;}
 .navbar-dark.nav-link,.navbar-dark a:hover,.navbar-dark .nav-item.active a.nav-link{ color: #fff!important;}
 .nav-item.active{border-bottom: solid 2px;}
-
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
 .pt-nav{padding-top: 100px;}
 
 .be-solid-white{border-right: solid 2px #fff;}
@@ -106,11 +112,11 @@ h3,p{font-size: 20px;}
     background-color: transparent!important; 
     border-bottom: none!important;
 }
-
+footer{border-top: solid 0.5px #EFEFEF;}
 
 /*LANDING*/
 #index{
-    background: url('../img/Banner.webp') no-repeat;
+    background: url('../assets/img/Banner.webp') no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment:fixed;
@@ -119,7 +125,7 @@ h3,p{font-size: 20px;}
 }
 #services{background-color: #f8f9fa; min-height: 100vh;}
 #projects,#us{background-color: #fff;}
-#us{min-height: 100vh;}
+#us,#contact{min-height: 100vh;}
 #contact,footer{background-color: #000!important; color: #fff!important;}
 #contact .title{background-color: #000;}
 #contact .text{color: #96a1ab;}

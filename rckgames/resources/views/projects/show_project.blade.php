@@ -18,7 +18,7 @@
                     <h2 id="project-name">{{ $project->name }}</h2>
                      @if(count($projectTypes) > 0)
                         @foreach($projectTypes as $projectType)
-                            <div class="badge badge-primary bg-black py-2">{{ $projectType->name }}</div>
+                            <div class="badge badge-primary bg-black p-2">{{ $projectType->name }}</div>
                         @endforeach    
                     @endif
                 </div>

@@ -164,7 +164,7 @@
 	top: 50%;
 	margin-left: -32px;
 	margin-top: -32px;
-	background: url("images/icons/play.png") no-repeat;
+	background: url("../assets/icons/play.png") no-repeat;
 	cursor: pointer;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
@@ -297,7 +297,8 @@
 	margin: 30px 4px 0 4px;
 	opacity: 0.5;
 	border-radius: 50%;
-	background-color: #1ABC9C;
+	/*background-color: #1ABC9C;*/
+	background-color: #848484;
 	-webkit-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
@@ -395,7 +396,8 @@
 .owl-carousel .owl-dots .owl-dot {
 	width: var(--owl-dots-sizes);
 	height: var(--owl-dots-sizes);
-	background-color: var(--owl-nav-bg);
+	/*background-color: var(--owl-nav-bg);*/
+	background-color: #848484;
 	margin-left: var(--owl-dots-gutters);
 	margin-right: var(--owl-dots-gutters);
 	transition: all .3s;

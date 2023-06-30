@@ -67,26 +67,14 @@ const scrollHandler = () => {
         $('.navbar').removeClass('bg-light');
         $('.navbar').addClass('navbar-dark');
         $('.navbar').addClass('bg-dark');
-        //$('#navbarLogo').attr('src','/img/RCK_LOGO_Black.png');
     } 
     if(min === distance_B){
         $('.navbar').addClass('navbar-light');
         $('.navbar').addClass('bg-light');
         $('.navbar').removeClass('navbar-dark');
         $('.navbar').removeClass('bg-dark');
-        //$('#navbarLogo').attr('src','/img/RCK_LOGO_White.png');
     } 
-
-    /*document.querySelectorAll('.navbar-nav .nav-item')[0].classList.remove('Highlight')
-    document.querySelectorAll('.navbar-nav .nav-item')[1].classList.remove('Highlight')
-    document.querySelectorAll('.navbar-nav .nav-item')[2].classList.remove('Highlight')
-
-    if(min === distance_A) document.querySelectorAll('.navbar-nav .nav-item')[0].classList.add('Highlight')
-    if(min === distance_B) document.querySelectorAll('.navbar-nav .nav-item')[1].classList.add('Highlight')
-    if(min === distance_C) document.querySelectorAll('.navbar-nav .nav-item')[2].classList.add('Highlight')*/
     //element.scroll({left: element.offsetLeft, behavior: 'smooth'})
-
-
 }
 
 

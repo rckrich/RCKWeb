@@ -11,7 +11,7 @@
 		<div class="container mw-xl pb-5">
 			<div class="title pb-5"><h1>{{$texts->firstWhere('textname', 'section_services_title')['description'];}}</h1></div>
 
-			<div class="owl-carousel image-carousel carousel-widget flip-card-wrapper clearfix" data-margin="20" data-nav="true" data-pagi="false" data-items-xs="1" data-items-sm="1" data-items-md="2" data-items-lg="3" data-items-xl="4" style="overflow: visible;">
+			<div class="owl-carousel image-carousel carousel-widget flip-card-wrapper clearfix" data-margin="20" data-nav="true" data-pagi="true" data-items-xs="1" data-items-sm="1" data-items-md="2" data-items-lg="3" data-items-xl="4" style="overflow: visible;">
 
 				<div class="flip-card">
 					<div class="flip-card-front bg-white">
@@ -19,7 +19,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
 									<div class="col-12 mx-0 px-0">
-										<img src="{{asset('icons/videogame.png')}}" class="mx-auto" height="60" width="60" alt="icon">
+										<img src="{{asset('assets/icons/videogame.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
 								<div class="card-body text-center">
@@ -35,7 +35,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
-									<img src="{{asset('icons/videogame-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<img src="{{asset('assets/icons/videogame-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
 									<div class="col-12 mx-0 px-0">										
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.videogame.title')}}</h3>
 									</div>
@@ -59,7 +59,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
 									<div class="col-12 mx-0 px-0 align-self-start">										
-										<img src="{{asset('icons/mobile.png')}}" class="mx-auto" height="60" width="60" alt="icon">
+										<img src="{{asset('assets/icons/mobile.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
 								<div class="card-body text-center">
@@ -75,7 +75,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
-									<img src="{{asset('icons/mobile-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<img src="{{asset('assets/icons/mobile-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
 									<div class="col-12 mx-0 px-0">										
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.mobile.title')}}</h3>
 									</div>
@@ -99,7 +99,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
 									<div class="col-12 mx-0 px-0">										
-										<img src="{{asset('icons/webapp.png')}}" class="mx-auto" height="60" width="60" alt="icon">
+										<img src="{{asset('assets/icons/webapp.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
 								<div class="card-body text-center">
@@ -115,7 +115,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
-									<img src="{{asset('icons/webapp-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<img src="{{asset('assets/icons/webapp-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
 									<div class="col-12 mx-0 px-0">										
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.webapp.title')}}</h3>
 									</div>
@@ -140,7 +140,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
 									<div class="col-12 mx-0 px-0">										
-										<img src="{{asset('icons/design.png')}}" class="mx-auto" height="60" width="60" alt="icon">
+										<img src="{{asset('assets/icons/design.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
 								<div class="card-body text-center">
@@ -156,7 +156,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
-									<img src="{{asset('icons/design-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<img src="{{asset('assets/icons/design-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
 									<div class="col-12 mx-0 px-0">										
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.design.title')}}</h3>
 									</div>
@@ -180,7 +180,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
 									<div class="col-12 mx-0 px-0">										
-										<img src="{{asset('icons/ar.png')}}" class="mx-auto" height="60" width="60" alt="icon">
+										<img src="{{asset('assets/icons/ar.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
 								<div class="card-body text-center">
@@ -196,7 +196,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
-									<img src="{{asset('icons/ar-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
+									<img src="{{asset('assets/icons/ar-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
 									<div class="col-12 mx-0 px-0">										
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.ar.title')}}</h3>
 									</div>
@@ -237,7 +237,7 @@
 					<div class="bg-overlay">
 						<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
 							<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-								<h3><a href="{{ route('projects.showp', $project) }}">{{$project->name}}</a></h3>
+								<h3><a href="{{ route('projects.showp', $project) }}" target=”_blank”>{{$project->name}}</a></h3>
 							</div>
 						</div>
 						<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
@@ -252,7 +252,7 @@
 	<section id="clients">
 		<div class="title py-5 bg-white"><h3>{{$texts->firstWhere('textname', 'section_clients_title')['description'];}}</h3></div>
 		<div class="row mx-0 px-0">
-			<div class="section m-0" style="padding: 80px 0">
+			<div class="section m-0" style="">
 				<div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel carousel-widget owl-loaded owl-drag" 
 				data-margin="0" data-nav="false" data-pagi="false" data-loop="true" data-autoplay="3000" data-items-xs="2" 
 				data-items-sm="3" data-items-md="5" data-items-lg="5" data-items-xl="5">
@@ -263,7 +263,7 @@
 							<div class="owl-item" style="width: 347.6px;">
 								<div class="oc-item">
 									<a href="#">
-										<img src="{{asset($client->img_url) }}" class="mx-auto w-100" alt="Brands">
+										<img src="{{asset($client->img_url) }}" class="mx-auto" width="320" height="220" alt="Brands">
 									</a>
 								</div>
 							</div>              
@@ -292,10 +292,10 @@
 </section>
 <section id="contact" class="row px-0 mx-0 align-items-center">
 	<div class="container mw-lg py-lg-5">
-		<div class="title py-5 text-center"><h1>{{$texts->firstWhere('textname', 'section_contact_title')['description'];}}</h1></div>
+		<div class="title pb-5 text-center"><h1>{{$texts->firstWhere('textname', 'section_contact_title')['description'];}}</h1></div>
 		<div class="row mx-0 px-0 justify-content-center mt-3">
 			<div class="col-lg-5 col-md-5 col-sm-12 col-12 ms-auto px-5 py-lg-0 be-solid-white">
-				<img class="" src="{{asset('icons/Headphones@1x.png')}}" height="32" width="35"/>
+				<img class="" src="{{asset('assets/icons/Headphones@1x.png')}}" height="32" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'contact_us_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'contact_us_text')['description'];}}</p>
 				<div class="row mt-4">
@@ -303,21 +303,21 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-12 px-5 py-lg-0">
-				<img class="" src="{{asset('icons/World@1x.png')}}" height="35" width="35"/>
+				<img class="" src="{{asset('assets/icons/World@1x.png')}}" height="35" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'social_net_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'social_net_text')['description'];}}</p>
 				<div class="row mt-5">
-					<div class="col-1 me-3">
+					<div class="col-1 me-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
 							<img src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
-					<div class="col-1 mx-3">
+					<div class="col-1 mx-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
-							<img src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url']);}}" height="42" width="42"/>
+							<img src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url']);}}" height="35" width="43"/>
 						</a>
 					</div>
-					<div class="col-1 mx-3">
+					<div class="col-1 mx-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
 							<img src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url']);}}" height="42" width="42"/>
 						</a>
