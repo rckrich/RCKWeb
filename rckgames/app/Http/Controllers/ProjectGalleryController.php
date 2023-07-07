@@ -66,7 +66,7 @@ class ProjectGalleryController extends Controller
             $message = trans('general.success_destroy',['object' => trans('project.galleries.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_destroy',['object' => trans('project.galleries.object')]);
+            $message = trans('general.error_destroy',['object' => trans('project.galleries.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
 

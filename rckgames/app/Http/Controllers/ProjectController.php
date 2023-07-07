@@ -66,7 +66,7 @@ class ProjectController extends Controller
             $message = trans('general.success_store',['object' => trans('project.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_store',['object' => trans('project.object')]);
+            $message = trans('general.error_store',['object' => trans('project.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('projects.index')->with($status, $message);
@@ -109,11 +109,11 @@ class ProjectController extends Controller
     {
         try{
             $data = $request->validate([
-                'name' => 'required',
-                'description' => 'required',
-                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
-                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
-                'creation_date' => 'required|date',
+                'name' => '',
+                'description' => '',
+                'banner_img_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'icon_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'creation_date' => 'date',
                 //'project_types' => 'required|array',
                 //'project_types.*' => 'exists:sw_types,id',
 
@@ -139,7 +139,7 @@ class ProjectController extends Controller
             $status = 'success';
         }
         catch ( \Exception $e ) {
-            $message = trans('general.error_update',['object' => trans('project.object')]);
+            $message = trans('general.error_update',['object' => trans('project.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('projects.index')->with($status, $message);
@@ -158,7 +158,7 @@ class ProjectController extends Controller
             $message = trans('general.success_destroy',['object' => trans('project.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_destroy',['object' => trans('project.object')]);
+            $message = trans('general.error_destroy',['object' => trans('project.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
 

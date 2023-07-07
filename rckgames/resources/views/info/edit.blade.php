@@ -21,16 +21,16 @@
             </div>
             
             @isset($info->img_url)
-            <!--div class="form-group">
+            <div class="form-group">
                 <label for="current_img_url">{{__('general.current_img')}}:</label>
                 <img id="current_img_url" name="current_img_url" src="{{asset($info->img_url)}}" alt="Info Image" class="img-thumbnail" width="100">
-            </div-->
+            </div>
             @endisset
 
             <div class="form-group">
                 <label for="img_url">{{__('info.img_url')}}:</label><br>
                 <label for="img_url">{{__('general.img_file')}}:</label>
-                <input type="file" name="img_url" id="img_url" class="form-control-file" required>
+                <input type="file" name="img_url" id="img_url" class="form-control-file">
             </div>
 
             <button type="submit" class="btn btn-primary mt-3">{{__('general.btn_update')}}</button>

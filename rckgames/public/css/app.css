@@ -59,20 +59,11 @@ h1,h3,.card-title, #contact .subtitle{
 .nav-item.active{border-bottom: solid 2px;}
 .pt-nav{padding-top: 100px;}
 #OpenMenu{margin-right: 30px!important;}
-#navbarNav{padding:0 30px!important;}
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-}
-@media (max-width: 991px){
-    #navbarNav{padding:30px!important;}
-}
-
-
+#navbarNav{padding:0 50px!important;}
 
 .be-solid-white{border-right: solid 2px #fff;}
+.pe-50{padding-right: 50px;}
+
 
 h1{font-size: 30px;}
 h2{font-size: 26px;}
@@ -80,6 +71,7 @@ h3,p{font-size: 20px;}
 .title{text-align: center; font-weight: 600;}
 .title.py-5{padding: 5rem 0!important;}
 .title.pb-5{padding: 0 0 5rem 0!important;}
+#services .title, #projects .title{padding-top: 8rem!important;}
 .subtitle,.quote,.card-title{font-size: 22px;}
 .text{
     color: #737c84;
@@ -96,7 +88,7 @@ h3,p{font-size: 20px;}
     color: #fff;
 }
 .card-subtitle{
-    font-size: 15px ;
+    font-size: 16px !important;
     font-weight: 400 ;
     line-height: 26px ;
     color: #737c84 ;
@@ -147,4 +139,28 @@ footer{border-top: solid 0.5px #EFEFEF;}
     font-weight: 400 ;
     line-height: 29px ;
     color: #737c84 ;
+}
+
+
+/*responsive*/
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media (max-width: 1536px){
+    
+    h1{font-size: 28px!important;}    
+    #contact .text,#us .text {font-size: 17px!important;}
+
+    footer p{font-size: 15px!important;}
+    footer .icon-social{width: 35px!important;height: 35px!important;}
+    footer .icon-social-b{width: 36px!important; height: 29px!important;}
+}
+@media (max-width: 1366px){
+    .card-body ul li{font-size: 14px!important;}
+}
+@media (max-width: 991px){
+    #navbarNav{padding:30px!important;}
 }

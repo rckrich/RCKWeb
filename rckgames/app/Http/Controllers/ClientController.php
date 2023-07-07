@@ -33,7 +33,7 @@ class ClientController extends Controller
             $message = trans('general.success_store',['object' => trans('client.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_store',['object' => trans('client.object')]);
+            $message = trans('general.error_store',['object' => trans('client.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('clients.index')->with($status, $message);
@@ -62,7 +62,7 @@ class ClientController extends Controller
             $message = trans('general.success_update',['object' => trans('client.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_update',['object' => trans('client.object')]);
+            $message = trans('general.error_update',['object' => trans('client.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
 
@@ -76,7 +76,7 @@ class ClientController extends Controller
             $message = trans('general.success_destroy',['object' => trans('client.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_destroy',['object' => trans('client.object')]);
+            $message = trans('general.error_destroy',['object' => trans('client.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
 

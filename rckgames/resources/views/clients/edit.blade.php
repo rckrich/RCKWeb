@@ -7,6 +7,12 @@
     <form action="{{ route('clients.update', $client) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
+        @isset($client->img_url)
+        <div class="form-group">
+            <label for="current_img_url">{{__('general.current_img')}}:</label>
+            <img id="current_img_url" name="current_img_url" src="{{asset($client->img_url)}}" alt="Info Image" class="img-thumbnail" width="100">
+        </div>
+        @endisset
         <div class="form-group">
             <label for="img_url">{{__('general.img_file')}}</label>
             <input type="file" name="img_url" id="img_url" class="form-control-file" required>

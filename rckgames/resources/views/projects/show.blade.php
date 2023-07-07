@@ -67,7 +67,7 @@
     <a href="{{ route('project_types.create', $project->id) }}" class="btn btn-primary">{{__('general.btn_add',['object'=>trans('project.project_types.object')])}}</a>
     @if(count($projectTypes) > 0)
     @foreach($projectTypes as $projectType)
-        <div class="badge badge-primary">{{ $projectType->name }}</div>
+        <div class="badge badge-primary bg-black p-2">{{ $projectType->name }}</div>
         <form action="{{ route('project_types.destroy', ['project' => $project, 'projectType' => $projectType->project_type_id]) }}" method="POST" class="d-inline">
             @csrf
             @method('DELETE')

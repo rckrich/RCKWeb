@@ -35,7 +35,7 @@ class RCKInfoController extends Controller
             $message = trans('general.success_store',['object' => trans('info.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_store',['object' => trans('info.object')]);
+            $message = trans('general.error_store',['object' => trans('info.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('info.index')->with($status, $message);
@@ -57,7 +57,7 @@ class RCKInfoController extends Controller
             $data = $request->validate([
                 'fieldname' => 'required',
                 'value' => 'required',
-                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'img_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
             ]);
 
             if (isset($data['img_url'])) {
@@ -72,7 +72,7 @@ class RCKInfoController extends Controller
             $status = 'success';
         }
         catch ( \Exception $e ) {
-            $message = trans('general.error_update',['object' => trans('info.object')]);
+            $message = trans('general.error_update',['object' => trans('info.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('info.index')->with($status, $message);
@@ -85,7 +85,7 @@ class RCKInfoController extends Controller
             $message = trans('general.success_destroy',['object' => trans('info.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_destroy',['object' => trans('info.object')]);
+            $message = trans('general.error_destroy',['object' => trans('info.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
 

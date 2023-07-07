@@ -124,7 +124,7 @@
 										<li>{{__('landing.services.webapp.desc_2')}}</li>
 										<li>{{__('landing.services.webapp.desc_3')}}</li>
 										<li>{{__('landing.services.webapp.desc_4')}}</li>
-										<li>{{__('landing.services.webapp.desc_5')}}</li>
+										<!--li>{{__('landing.services.webapp.desc_5')}}</li-->
 										<li>{{__('landing.services.webapp.desc_6')}}</li>
 										<li>{{__('landing.services.webapp.desc_7')}}</li>
 										<li>{{__('landing.services.webapp.desc_8')}}</li>
