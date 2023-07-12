@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Gallery;
 use App\Models\Project;
 
@@ -33,17 +34,22 @@ class ProjectGalleryController extends Controller
         try{
             //$mimeType = $request->img_url->getMimeType();
             $data = $request->validate([
-                'img_url' => 'required|file|mimetypes:jpeg,png,jpg,gif,svg,webp,video/mp4,video/mov,video/avi,video/mpeg,video/quicktime|max:1048576',
-            ]);
-            $imgUrl = $data['img_url']->store('public/images/gallery');
-            $data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
-            $data['project_id'] = $project->id;
-    
-            Gallery::create($data);
+                'img_url' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/svg+xml,image/webp,video/mp4,video/quicktime,video/x-msvideo,video/mpeg,video/mov,video/avi|max:1048576',
+            ],);
 
-            $message = trans('general.success_load',['object' => trans('project.galleries.object')]);
-            $status = 'success';
-         
+            if ($request->hasFile('img_url')) {
+                //$imgUrl = $data['img_url']->store('public/images/gallery');
+                //$data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
+                $imgUrl = Storage::putFile('public/images/gallery', $data['img_url']);
+                $data['img_url'] = Storage::url($imgUrl);
+
+                $data['project_id'] = $project->id;
+        
+                Gallery::create($data);
+
+                $message = trans('general.success_load',['object' => trans('project.galleries.object')]);
+                $status = 'success';
+            }
         } catch ( \Exception $e ) {
             $message = trans('general.error_load',['object' => trans('project.galleries.object')])."\r\n".$e->getMessage();
             $status = 'error';

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Project;
 use App\Models\ProjectType;
 use App\Models\SwType;
@@ -46,19 +47,23 @@ class ProjectController extends Controller
             $data = $request->validate([
                 'name' => 'required',
                 'description' => 'required',
-                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
-                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'banner_img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
+                'icon_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
                 'creation_date' => 'required|date',
             ]);
 
             if ($request->hasFile('banner_img_url')) {
-                $bannerUrl = $data['banner_img_url']->store('public/images/projects/banners');
-                $data['banner_img_url'] = str_replace('public/', 'storage/', $bannerUrl);
+                //$bannerUrl = $data['banner_img_url']->store('public/images/projects/banners');
+                //$data['banner_img_url'] = str_replace('public/', 'storage/', $bannerUrl);
+                $bannerUrl = Storage::putFile('public/images/projects/banners', $data['banner_img_url']);
+                $data['banner_img_url'] = Storage::url($bannerUrl);
             }
 
             if ($request->hasFile('icon_url')) {
-                $iconUrl = $data['icon_url']->store('public/images/projects/icons');
-                $data['icon_url'] = str_replace('public/', 'storage/', $iconUrl);
+                //$iconUrl = $data['icon_url']->store('public/images/projects/icons');
+                //$data['icon_url'] = str_replace('public/', 'storage/', $iconUrl);
+                $iconUrl = Storage::putFile('public/images/projects/icons', $data['icon_url']);
+                $data['icon_url'] = Storage::url($iconUrl);
             }
 
             Project::create($data);
@@ -111,8 +116,8 @@ class ProjectController extends Controller
             $data = $request->validate([
                 'name' => '',
                 'description' => '',
-                'banner_img_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
-                'icon_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'banner_img_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
+                'icon_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
                 'creation_date' => 'date',
                 //'project_types' => 'required|array',
                 //'project_types.*' => 'exists:sw_types,id',
@@ -120,15 +125,19 @@ class ProjectController extends Controller
             ]);
             
             if (isset($data['banner_img_url'])) {
-                $bannerUrl = $data['banner_img_url']->store('public/images/projects/banners');
-                $data['banner_img_url'] = str_replace('public/', 'storage/', $bannerUrl);
+                //$bannerUrl = $data['banner_img_url']->store('public/images/projects/banners');
+                //$data['banner_img_url'] = str_replace('public/', 'storage/', $bannerUrl);
+                $bannerUrl = Storage::putFile('public/images/projects/banners', $data['banner_img_url']);
+                $data['banner_img_url'] = Storage::url($bannerUrl);
             } else {
                 unset($data['img_url']);
             }
 
             if (isset($data['icon_url'])) {
-                $iconUrl = $data['icon_url']->store('public/images/projects/icons');
-                $data['icon_url'] = str_replace('public/', 'storage/', $iconUrl);
+                //$iconUrl = $data['icon_url']->store('public/images/projects/icons');
+                //$data['icon_url'] = str_replace('public/', 'storage/', $iconUrl);
+                $iconUrl = Storage::putFile('public/images/projects/icons', $data['icon_url']);
+                $data['icon_url'] = Storage::url($iconUrl);
             } else {
                 unset($data['icon_url']);
             }
@@ -200,7 +209,7 @@ class ProjectController extends Controller
             $message = trans('general.success_load', ['object' => trans('project.project_types.object')]);
             $status = 'success';
         } catch (\Exception $e) {
-            $message = trans('general.error_load', ['object' => trans('project.project_types.object')]).$e;
+            $message = trans('general.error_load', ['object' => trans('project.project_types.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
 
@@ -224,7 +233,7 @@ class ProjectController extends Controller
             $message = trans('general.success_destroy',['object' => trans('project.project_types.object')]);
             $status = 'success';
         } catch ( \Exception $e ) {
-            $message = trans('general.error_destroy',['object' => trans('project.project_types.object')]).$e;
+            $message = trans('general.error_destroy',['object' => trans('project.project_types.object')])."\r\n".$e->getMessage();
             $status = 'error';
         }
         return redirect()->route('projects.show', ['project' => $project])->with($status, $message);

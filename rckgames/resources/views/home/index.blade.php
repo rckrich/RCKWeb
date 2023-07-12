@@ -217,7 +217,7 @@
 
 	<section id="projects">
 		<div class="title py-5 bg_white"><h1>{{$texts->firstWhere('textname', 'section_projects_title')['description'];}}</h1></div>
-		<div class="row mx-0 px-0">
+		<div id="project-filters" class="row mx-0 px-0">
 			<div class="grid-filter-wrap">
 				<ul class="grid-filter style-2 mx-auto" data-container="#portfolio">
 					<li class="activeFilter"><a href="#" data-filter="*">Todo</a></li>
@@ -263,7 +263,7 @@
 							<div class="owl-item" style="width: 347.6px;">
 								<div class="oc-item">
 									<a href="#">
-										<img src="{{asset($client->img_url) }}" class="mx-auto" width="320" height="220" alt="Brands">
+										<img src="{{asset($client->img_url) }}" class="client-img mx-auto" width="320" height="220" alt="Brands">
 									</a>
 								</div>
 							</div>              
@@ -282,7 +282,7 @@
 	</section>
 	
 	<section id="us" class="row px-0 mx-0 align-items-center">                
-		<div class="container mw-lg py-5">
+		<div class="container mw-lg p-5">
 			<div class="title pb-5"><h1>{{$texts->firstWhere('textname', 'section_us_title')['description'];}}</h1></div>
 			<p class="py-2 text">{{$texts->firstWhere('textname', 'us_text_1')['description'];}}</p>
 			<p class="py-5 quote">{{$texts->firstWhere('textname', 'us_catchphrase')['description'];}}</p>
@@ -291,10 +291,10 @@
 	</section>
 </section>
 <section id="contact" class="row px-0 mx-0 align-items-center">
-	<div class="container mw-lg py-lg-5">
+	<div class="container mw-lg py-5 ">
 		<div class="title pb-5 text-center"><h1>{{$texts->firstWhere('textname', 'section_contact_title')['description'];}}</h1></div>
 		<div class="row mx-0 px-0 justify-content-center mt-3">
-			<div class="col-lg-5 col-md-5 col-sm-12 col-12 ms-auto px-5 py-lg-0 be-solid-white">
+			<div class="col-lg-5 col-md-5 col-sm-12 col-12 ms-auto px-5 py-lg-0 py-sm-3 py-xs-3 be-solid-white">
 				<img class="" src="{{asset('assets/icons/Headphones@1x.png')}}" height="32" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'contact_us_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'contact_us_text')['description'];}}</p>
@@ -302,24 +302,24 @@
 					<p class="text">{{$texts->firstWhere('textname', 'contact_email')['description'];}}</p>
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-12 px-5 py-lg-0">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12 px-5 py-lg-0 py-sm-3 py-xs-3">
 				<img class="" src="{{asset('assets/icons/World@1x.png')}}" height="35" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'social_net_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'social_net_text')['description'];}}</p>
 				<div class="row mt-5">
 					<div class="col-1 me-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
-							<img src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
+							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
 					<div class="col-1 mx-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
-							<img src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url']);}}" height="35" width="43"/>
+							<img class="icon-social-b" src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url']);}}" height="35" width="43"/>
 						</a>
 					</div>
 					<div class="col-1 mx-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
-							<img src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url']);}}" height="42" width="42"/>
+							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
 				</div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\RckInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RCKInfoController extends Controller
 {
@@ -24,16 +25,21 @@ class RCKInfoController extends Controller
            $data = $request->validate([
                 'fieldname' => 'required',
                 'value' => 'required',
-                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
             ]);
 
-            $imgUrl = $data['img_url']->store('public/images/info');
-            $data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
-
+            if ($request->hasFile('img_url')) {   
+                //$imgUrl = $data['img_url']->store('public/images/info');
+                //$data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
+                $imgUrl = Storage::putFile('public/images/info', $data['img_url']);
+                $data['img_url'] = Storage::url($imgUrl);
+            }
+         
             RckInfo::create($data); 
             
             $message = trans('general.success_store',['object' => trans('info.object')]);
             $status = 'success';
+           
         } catch ( \Exception $e ) {
             $message = trans('general.error_store',['object' => trans('info.object')])."\r\n".$e->getMessage();
             $status = 'error';
@@ -57,12 +63,14 @@ class RCKInfoController extends Controller
             $data = $request->validate([
                 'fieldname' => 'required',
                 'value' => 'required',
-                'img_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
+                'img_url' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
             ]);
 
             if (isset($data['img_url'])) {
-                $imgUrl = $data['img_url']->store('public/images/info');
-                $data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
+                //$imgUrl = $data['img_url']->store('public/images/info');
+                //$data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
+                $imgUrl = Storage::putFile('public/images/info', $data['img_url']);
+                $data['img_url'] = Storage::url($imgUrl);
             } else {
                 unset($data['img_url']);
             }

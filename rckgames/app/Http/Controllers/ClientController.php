@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ClientController extends Controller
 {
@@ -26,12 +27,16 @@ class ClientController extends Controller
                 'img_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:50000',
             ]);
     
-            $imgUrl = $data['img_url']->store('public/images/clients');
-            $data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
-    
-            Client::create($data);
-            $message = trans('general.success_store',['object' => trans('client.object')]);
-            $status = 'success';
+            if ($request->hasFile('img_url')) {
+                //$imgUrl = $data['img_url']->store('public/images/clients');
+                //$data['img_url'] = str_replace('public/', 'storage/', $imgUrl);
+                $imgUrl = Storage::putFile('public/images/clients', $data['img_url']);
+                $data['img_url'] = Storage::url($imgUrl);
+        
+                Client::create($data);
+                $message = trans('general.success_store',['object' => trans('client.object')]);
+                $status = 'success';
+            }
         } catch ( \Exception $e ) {
             $message = trans('general.error_store',['object' => trans('client.object')])."\r\n".$e->getMessage();
             $status = 'error';
