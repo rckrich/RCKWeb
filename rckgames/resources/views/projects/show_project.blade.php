@@ -19,7 +19,7 @@
                      @if(count($projectTypes) > 0)
                         @foreach($projectTypes as $projectType)
                             <div class="badge badge-primary bg-black p-2">{{ $projectType->name }}</div>
-                        @endforeach    
+                        @endforeach
                     @endif
                 </div>
             </div>
@@ -33,7 +33,7 @@
         <div class="row mx-0 px-0 py-5 max-height-gallery">
             @if(count($galleries) > 0)
             @foreach($galleries as $gallery)
-            <div class="col-4 p-0 m-0">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0">
                 @if(Str::endsWith($gallery->img_url, ['.jpg', '.jpeg', '.png', '.gif']))
                 <a class="grid-item" href="{{asset($gallery->img_url) }}" data-lightbox="gallery-item" >
                     <img src="{{asset($gallery->img_url) }}" alt="Gallery Image" class="gallery-img w-100 h-100" />
