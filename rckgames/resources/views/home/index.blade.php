@@ -295,7 +295,7 @@
 		<div class="title pb-5 text-center"><h1>{{$texts->firstWhere('textname', 'section_contact_title')['description'];}}</h1></div>
 		<div class="row mx-0 px-0 justify-content-center mt-3">
 			<div class="col-lg-5 col-md-5 col-sm-12 col-12 ms-auto px-5 py-lg-0 py-sm-3 py-xs-3 be-solid-white">
-				<img class="" src="{{asset('assets/icons/Headphones@1x.png')}}" height="32" width="35"/>
+				<img class="icon-contact" src="{{asset('assets/icons/Headphones@1x.png')}}" height="32" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'contact_us_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'contact_us_text')['description'];}}</p>
 				<div class="row mt-4">
@@ -303,7 +303,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-12 px-5 py-lg-0 py-sm-3 py-xs-3">
-				<img class="" src="{{asset('assets/icons/World@1x.png')}}" height="35" width="35"/>
+				<img class="icon-contact" src="{{asset('assets/icons/World@1x.png')}}" height="35" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'social_net_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'social_net_text')['description'];}}</p>
 				<div class="row mt-5">

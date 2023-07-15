@@ -66,7 +66,7 @@
         <div class="p-5 text-center">
             <div class="row mx-0 px-0">
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 offset-lg-4 align-self-center py-2">           
-                    <img id="" src="{{asset('assets/img/RCK_LOGO_Black.png')}}" alt="RCK Logo" class="" height="77" width="77"/>
+                    <img id="footer-logo" src="{{asset('assets/img/RCK_LOGO_Black.png')}}" alt="RCK Logo" class="" height="77" width="77"/>
 
                     <p class="my-auto">{{$texts->firstWhere('textname', 'footer_text')['description'];}}</p>
                 </div>

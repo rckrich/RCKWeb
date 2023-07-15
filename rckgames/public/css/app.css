@@ -163,9 +163,15 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .card-body ul li{font-size: 14px!important;}
 }
 @media (max-width: 991px){
+    .navbar,.navbar-brand {height: 70px!important;}
+    .pt-nav{padding-top: 70px;}
+    #navbarLogo{height: 60px; width: 60px;}
     .pe-50{padding-right: 0;}
     #navbarNav{padding:30px!important;}
     .pe-50>.me-3, .pe-50>.mx-3{margin-left: auto!important; margin-right: auto!important;}
+    .icon-social{width: 30px!important;height: 30px!important;}
+    .icon-social-b{width: 31px!important; height: 25px!important;}
+    #footer-logo{width: 60px; height:60px}
 }
 @media (max-width: 860px){
     #index{
@@ -188,7 +194,12 @@ footer{border-top: solid 0.5px #EFEFEF;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5 {padding: 0 0 1rem 0!important;}
     .title.py-5, .py-5.quote{padding: 2rem 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
 
     h1{font-size: 20px!important;}    
     #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
 }
