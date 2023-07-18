@@ -308,17 +308,17 @@
 				<p class="text">{{$texts->firstWhere('textname', 'social_net_text')['description'];}}</p>
 				<div class="row mt-5">
 					<div class="col-1 me-3 my-auto">
-						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
+						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}" target=”_blank”>
 							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
 					<div class="col-1 mx-3 my-auto">
-						<a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
+						<a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}" target=”_blank”>
 							<img class="icon-social-b" src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url']);}}" height="35" width="43"/>
 						</a>
 					</div>
 					<div class="col-1 mx-3 my-auto">
-						<a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
+						<a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}" target=”_blank”>
 							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>

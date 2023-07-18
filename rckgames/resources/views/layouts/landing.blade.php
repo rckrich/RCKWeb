@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>RCKgames</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -73,17 +73,17 @@
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 align-self-center py-2">
                     <div class="row my-auto pe-50">
                         <div class="col-lg-1 col me-3 ms-auto my-auto">
-                            <a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}">
+                            <a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}" target=”_blank”>
                                 <img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url'])}}" height="42" width="42"/>
                             </a>
                         </div>
                         <div class="col-lg-1 col mx-3 my-auto">
-                            <a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}">
+                            <a href="{{$info->firstWhere('fieldname', 'twitter')['value'];}}" target=”_blank”>
                                 <img class="icon-social-b" src="{{asset($info->firstWhere('fieldname', 'twitter')['img_url'])}}" height="35" width="43"/>
                             </a>
                         </div>
                         <div class="col-lg-1 col mx-3 my-auto">
-                            <a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}">
+                            <a href="{{$info->firstWhere('fieldname', 'instagram')['value'];}}" target=”_blank”>
                                 <img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url'])}}" height="42" width="42"/>
                             </a>
                         </div>

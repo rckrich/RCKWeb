@@ -21,10 +21,12 @@
     background-position: center!important; 
     background-size: cover!important;
     width: var(--owl-nav-sizes);
-    height: var(--owl-nav-sizes);   
+    height: var(--owl-nav-sizes);  
+    border-radius: 100px; 
 }
-.icon-angle-left{background: url('../assets/icons/PreviousButton@1x.png') no-repeat;}
-.icon-angle-right{background: url('../assets/icons/NextButton@1x.png') no-repeat;}
+.icon-angle-left{background: url('../assets/icons/back.png') no-repeat;}
+.icon-angle-right{background: url('../assets/icons/next.png') no-repeat;}
+button.owl-prev,button.owl-next{border: solid 1px #000!important;}
 
 body{
     background-color: #f8f9fa;
@@ -192,8 +194,9 @@ footer{border-top: solid 0.5px #EFEFEF;}
         padding-bottom: 1rem!important;
     }
     #services .title, #projects .title {padding-top: 5rem!important;}
-    .title.pb-5 {padding: 0 0 1rem 0!important;}
-    .title.py-5, .py-5.quote{padding: 2rem 0!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
     .subtitle,.quote,.card-title{font-size: 18px;}
 
     h1{font-size: 20px!important;}    

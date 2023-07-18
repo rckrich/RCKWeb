@@ -5,25 +5,29 @@
 @section('content')
 <section id="view_project" class="row px-0 py-5 mx-0 align-items-center" data-big="2" data-lightbox="gallery">
 <div class="container mw-xl">
-    <div class="row pb-5">
-        <div class="col-lg-5 col-md-5 col-sm-12 col-12 p-4">
+    <div class="row ">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-12 p-4 my-auto">
             <img id="project-banner" src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100">
         </div>
-        <div class="col-lg-7 col-md-7 col-sm-12 col-12 p-4">
+        <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-4">
             <div class="row">
-                <div class="col-2">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-4 my-auto">
                     <img id="project-icon" src="{{asset($project->icon_url) }}" alt="Icon Image" class="w-100">
                 </div>
-                <div class="col">
-                    <h2 id="project-name">{{ $project->name }}</h2>
+                <div class="row col align-items-start">
+                    <div class="col-12 mt-auto">
+                        <h2 class="" id="project-name">{{ $project->name }}</h2>                    
+                    </div>
+                    <div class="col mb-auto py-2">
                      @if(count($projectTypes) > 0)
-                        @foreach($projectTypes as $projectType)
-                            <div class="badge badge-primary bg-black p-2">{{ $projectType->name }}</div>
+                        @foreach($projectTypes as $projectType)                    
+                            <div class=" badge badge-primary bg-black px-2 py-2 my-1">{{ $projectType->name }}</div>    
                         @endforeach
                     @endif
+                    </div>
                 </div>
             </div>
-            <div class="row py-5">
+            <div class="row pt-5">
                 <p class="project-description">{{ $project->description }}</p>
             </div>
         </div>

@@ -38,11 +38,11 @@
                         <td>
                             <a href="{{ route('texts.show', $text->id) }}" class="btn btn-info">{{__('general.btn_view')}}</a>
                             <a href="{{ route('texts.edit', $text->id) }}" class="btn btn-primary">{{__('general.btn_edit')}}</a>
-                            <form action="{{ route('texts.destroy', $text->id) }}" method="POST" style="display: inline-block">
+                            <!--form action="{{ route('texts.destroy', $text->id) }}" method="POST" style="display: inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger" onclick="return confirm( '{{__('general.delete_confirm_msg',['object' => trans('text.object')])}}' )">{{__('general.btn_delete')}}</button>
-                            </form>
+                            </form-->
                         </td>
                     </tr>
                 @endforeach
