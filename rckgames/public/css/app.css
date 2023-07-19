@@ -155,7 +155,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
 }
 .tag{
     font-family: 'Open Sans', Arial ;
-    font-size: 18px ;
+    font-size: 14px ;
     font-weight: 400 ;
     line-height: 27px ;
     color: #949ea8 ;
@@ -170,13 +170,13 @@ footer{border-top: solid 0.5px #EFEFEF;}
 }
 
 /*responsive*/
-@media (min-width: 992px){
+@media screen and (min-width: 992px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 15px;
         padding-left: 15px;
     }
 }
-@media (max-width: 1536px){
+@media screen and (max-width: 1536px){
     
     h1{font-size: 28px!important;}    
     #contact .text,#us .text {font-size: 17px!important;}
@@ -185,10 +185,10 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .icon-social{width: 35px!important;height: 35px!important;}
     .icon-social-b{width: 36px!important; height: 29px!important;}
 }
-@media (max-width: 1366px){
+@media screen and (max-width: 1366px){
     .card-body ul li{font-size: 14px!important;}
 }
-@media (max-width: 991px){
+@media screen and (max-width: 991px){
     .navbar,.navbar-brand {height: 70px!important;}
     .pt-nav{padding-top: 70px;}
     #navbarLogo{height: 60px; width: 60px;}
@@ -199,19 +199,19 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .icon-social-b{width: 31px!important; height: 25px!important;}
     #footer-logo{width: 60px; height:60px}
 }
-@media (max-width: 860px){
+@media screen and (max-width: 860px){
     #index{
         background: url('../assets/img/Banner_Movil.webp') no-repeat;
     }
 }
-@media (max-width: 767px){
+@media screen and (max-width: 767px){
     .be-solid-white{border-right: none;}
 
     h1{font-size: 25px!important;}    
     #contact .text,#us .text {font-size: 14px!important;}
 
 }
-@media (max-width: 575px){
+@media screen and (max-width: 575px){
     #project-filters{display: none; visibility: hidden;}
     .py-xs-3 {
         padding-top: 1rem!important;
