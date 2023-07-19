@@ -18,13 +18,26 @@
                     <div class="col-12 mt-auto">
                         <h2 class="" id="project-name">{{ $project->name }}</h2>                    
                     </div>
-                    <div class="col mb-auto py-2">
+
                      @if(count($projectTypes) > 0)
+                     <div class="col mb-auto py-2">
+                        <div class="badges">
                         @foreach($projectTypes as $projectType)                    
-                            <div class=" badge badge-primary bg-black px-2 py-2 my-1">{{ $projectType->name }}</div>    
-                        @endforeach
-                    @endif
+                            <div class="badge">{{ $projectType->name }}</div> 
+                        @endforeach 
+                        </div>                    
+                        <div class="tags"><p class="tag">   
+                        @foreach($projectTypes as $projectType)         
+                            @if($loop->last)
+                               {{ $projectType->name }}
+                            @else
+                                {{ $projectType->name.','}}
+                            @endif
+                        @endforeach 
+                        </p></div>
                     </div>
+                    @endif
+                   
                 </div>
             </div>
             <div class="row pt-5">

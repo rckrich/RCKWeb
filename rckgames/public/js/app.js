@@ -2,9 +2,13 @@
 
 $(document).ready(function () {
     handleURL();
+    handleTags();
+
     window.addEventListener('hashchange', function() { handleURL();});
     window.addEventListener('popstate', function() {handleURL();});
-
+    
+    window.addEventListener("resize", function() {handleTags();});
+    
     location.hash ? toggleLink(location.hash.replace('#','')) : '';
     
     //sets navbar collapse button behavior
@@ -20,6 +24,9 @@ $(document).ready(function () {
     });   
 
 });
+
+
+
 
 
 function toggleLink (routeID) {
@@ -39,6 +46,16 @@ function handleURL () {
     else{
         scrollHandler
         window.addEventListener('scroll', scrollHandler)
+    }
+}
+function handleTags(){
+    if(screen.width<575){
+        $('.badges').hide();
+        $('.tags').show();
+    }
+    else{
+        $('.badges').show();
+        $('.tags').hide();
     }
 }
 

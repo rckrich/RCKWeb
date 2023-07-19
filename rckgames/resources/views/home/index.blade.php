@@ -8,7 +8,7 @@
 </section>
 <section id="light_nav">
 	<section id="services" class="row px-0 mx-0 align-items-center">
-		<div class="container mw-xl pb-5">
+		<div class="container mw-xl pb-5 px-lg-5 px-4" style="overflow:hidden">
 			<div class="title pb-5"><h1>{{$texts->firstWhere('textname', 'section_services_title')['description'];}}</h1></div>
 
 			<div class="owl-carousel image-carousel carousel-widget flip-card-wrapper clearfix" data-margin="20" data-nav="true" data-pagi="true" data-items-xs="1" data-items-sm="1" data-items-md="2" data-items-lg="3" data-items-xl="4" style="overflow: visible;">
