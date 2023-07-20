@@ -6,21 +6,21 @@
 <section id="view_project" class="row px-0 py-5 mx-0 align-items-center" data-big="2" data-lightbox="gallery">
 <div class="container mw-xl">
     <div class="row ">
-        <div class="col-lg-5 col-md-12 col-sm-12 col-12 p-4 my-auto">
+        <div class="col-lg-5 col-md-12 col-sm-12 col-12 p-4">
             <img id="project-banner" src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100">
         </div>
         <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-4">
             <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-3 col-4 my-auto">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-4">
                     <img id="project-icon" src="{{asset($project->icon_url) }}" alt="Icon Image" class="w-100">
                 </div>
-                <div class="row col align-items-start">
-                    <div class="col-12 mt-auto">
+                <div class="col">
+                    <div class="col-12 my-0">
                         <h2 class="" id="project-name">{{ $project->name }}</h2>                    
                     </div>
 
                      @if(count($projectTypes) > 0)
-                     <div class="col mb-auto py-2">
+                     <div class="col-12 mb-auto">
                         <div class="badges">
                         @foreach($projectTypes as $projectType)                    
                             <div class="badge">{{ $projectType->name }}</div> 
@@ -40,7 +40,7 @@
                    
                 </div>
             </div>
-            <div class="row pt-5">
+            <div class="row pt-lg-5 pt-3">
                 <p class="project-description">{{ $project->description }}</p>
             </div>
         </div>
