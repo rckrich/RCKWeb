@@ -31,7 +31,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flip-card-back bg-black">
+					<div class="flip-card-back bg-black no-after">
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
@@ -71,7 +71,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flip-card-back bg-black">
+					<div class="flip-card-back bg-black no-after">
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
@@ -111,7 +111,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flip-card-back bg-black">
+					<div class="flip-card-back bg-black no-after">
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
@@ -152,7 +152,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flip-card-back bg-black">
+					<div class="flip-card-back bg-black no-after">
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
@@ -192,7 +192,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flip-card-back bg-black">
+					<div class="flip-card-back bg-black no-after">
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
