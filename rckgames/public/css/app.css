@@ -123,10 +123,14 @@ footer{border-top: solid 0.5px #EFEFEF;}
 
 /*LANDING*/
 #index{
-    background: url('../assets/img/Banner.webp') no-repeat;
+    background: url('../assets/img/Banner.png') no-repeat;
     background-position: center!important;
     background-size: cover!important;
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
     background-attachment:fixed!important;
+    background-repeat: no-repeat!important;
     height: 100vh!important;
 }
 #services{background-color: #f8f9fa; min-height: 100vh;}
@@ -168,16 +172,26 @@ footer{border-top: solid 0.5px #EFEFEF;}
     margin-bottom: 0.25rem!important;
     color: #fff;
 }
+.tags{display: none; visibility: hidden;}
+.badges{display: block; visibility: visible;}
 
 /*responsive*/
-@media only screen and (min-width: 992px) and (min-device-width: 992px){
+@media screen and (min-width: 992px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 15px;
         padding-left: 15px;
     }
     .pt-lg-5{padding-top: 3rem!important;}
 }
-@media only screen and (max-width: 1536px) and (max-device-width: 1536px){
+@media only screen and (min-device-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .pt-lg-5{padding-top: 3rem!important;}
+}
+
+@media screen and (max-width: 1536px){
     
     h1{font-size: 28px!important;}    
     #contact .text,#us .text {font-size: 17px!important;}
@@ -186,10 +200,24 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .icon-social{width: 35px!important;height: 35px!important;}
     .icon-social-b{width: 36px!important; height: 29px!important;}
 }
-@media only screen and (max-width: 1366px) and (max-device-width: 1366px){
+@media only screen and (max-device-width: 1536px){
+    
+    h1{font-size: 28px!important;}    
+    #contact .text,#us .text {font-size: 17px!important;}
+
+    footer p{font-size: 15px!important;}
+    .icon-social{width: 35px!important;height: 35px!important;}
+    .icon-social-b{width: 36px!important; height: 29px!important;}
+}
+
+@media screen and (max-width: 1366px){
     .card-body ul li{font-size: 14px!important;}
 }
-@media only screen and (max-width: 991px) and (max-device-width: 991px){
+@media only screen and (max-device-width: 1366px){
+    .card-body ul li{font-size: 14px!important;}
+}
+
+@media screen and (max-width: 991px){
     .navbar,.navbar-brand {height: 70px!important;}
     .pt-nav{padding-top: 70px;}
     #navbarLogo{height: 60px; width: 60px;}
@@ -200,34 +228,184 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .icon-social-b{width: 31px!important; height: 25px!important;}
     #footer-logo{width: 60px; height:60px}
 }
-@media only screen and (max-width: 860px) and (max-device-width: 860px){
+@media only screen and (max-device-width: 991px){
+    .navbar,.navbar-brand {height: 70px!important;}
+    .pt-nav{padding-top: 70px;}
+    #navbarLogo{height: 60px; width: 60px;}
+    .pe-50{padding-right: 0;}
+    #navbarNav{padding:30px!important;}
+    .pe-50>.me-3, .pe-50>.mx-3{margin-left: auto!important; margin-right: auto!important;}
+    .icon-social{width: 30px!important;height: 30px!important;}
+    .icon-social-b{width: 31px!important; height: 25px!important;}
+    #footer-logo{width: 60px; height:60px}
+}
+
+@media screen and (max-width: 860px){
     #index{
-        background: url('../assets/img/Banner_Movil.webp') no-repeat;
+        background: url('../assets/img/Banner_Movil.png') no-repeat;
     }
 }
-@media only screen and (max-width: 767px) and (max-device-width: 767px){
+@media only screen and (max-device-width: 860px){
+    #index{
+        background: url('../assets/img/Banner_Movil.png') no-repeat;
+    }
+}
+
+@media screen and (max-width: 767px){
     .be-solid-white{border-right: none;}
 
     h1{font-size: 25px!important;}    
     #contact .text,#us .text {font-size: 14px!important;}
 
 }
-@media only screen and (max-width: 575px) and (max-device-width: 575px){
+@media only screen and (max-device-width: 767px){
+    .be-solid-white{border-right: none;}
+
+    h1{font-size: 25px!important;}    
+    #contact .text,#us .text {font-size: 14px!important;}
+
+}
+
+@media screen and (max-width: 575px){
     #project-filters{display: none; visibility: hidden;}
-    .py-xs-3 {
-        padding-top: 1rem!important;
-        padding-bottom: 1rem!important;
-    }
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
     .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
     #view_project > .row.pb-5  {padding: 0!important;}
     .subtitle,.quote,.card-title{font-size: 18px;}
-
     h1{font-size: 20px!important;}    
     #contact .text,#us .text {font-size: 16px!important;}
     .icon-contact{width: 30px!important;height: 30px!important;}
     .icon-social{width: 25px!important;height: 25px!important;}
     .icon-social-b{width: 26px!important; height: 20px!important;}
     #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
+}
+/* 2340x1080 pixels at 476ppi  --iPhone 13 mini*/
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {
+    #project-filters{display: none; visibility: hidden;}
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
+    #services .title, #projects .title {padding-top: 5rem!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
+    h1{font-size: 20px!important;}    
+    #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
+}
+/* 2532x1170 pixels at 460ppi --iPhone 13 and iPhone 13 Pro*/
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3)  {
+    #project-filters{display: none; visibility: hidden;}
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
+    #services .title, #projects .title {padding-top: 5rem!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
+    h1{font-size: 20px!important;}    
+    #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
+}
+/* 2778x1284 pixels at 458ppi --iPhone 13 Pro Max*/
+@media only screen 
+    and (device-width: 428px) 
+    and (device-height: 926px) 
+    and (-webkit-device-pixel-ratio: 3)  {
+    #project-filters{display: none; visibility: hidden;}
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
+    #services .title, #projects .title {padding-top: 5rem!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
+    h1{font-size: 20px!important;}    
+    #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
+}
+/* 1792x828px at 326ppi --iPhone 11*/
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
+    #project-filters{display: none; visibility: hidden;}
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
+    #services .title, #projects .title {padding-top: 5rem!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
+    h1{font-size: 20px!important;}    
+    #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
+}
+/* 2436x1125px at 458ppi --iPhone 11 Pro*/
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3){
+    #project-filters{display: none; visibility: hidden;}
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
+    #services .title, #projects .title {padding-top: 5rem!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
+    h1{font-size: 20px!important;}    
+    #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
+}
+/* 2688x1242px at 458ppi --iPhone 11 Pro Max*/
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3){
+    #project-filters{display: none; visibility: hidden;}
+    .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
+    #services .title, #projects .title {padding-top: 5rem!important;}
+    .title.pb-5{padding: 0 0 1rem 0!important;}
+    .title.py-5, .row.py-5, .py-5.quote{padding: 2rem 0!important;}
+    #view_project > .row.pb-5  {padding: 0!important;}
+    .subtitle,.quote,.card-title{font-size: 18px;}
+    h1{font-size: 20px!important;}    
+    #contact .text,#us .text {font-size: 16px!important;}
+    .icon-contact{width: 30px!important;height: 30px!important;}
+    .icon-social{width: 25px!important;height: 25px!important;}
+    .icon-social-b{width: 26px!important; height: 20px!important;}
+    #footer-logo{width: 55px; height:55px}
+    .badges{display: none; visibility: hidden;}
+    .tags{display: block; visibility: visible;}
 }

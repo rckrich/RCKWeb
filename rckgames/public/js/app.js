@@ -49,13 +49,9 @@ function handleURL () {
     }
 }
 function handleTags(){
+    imageUrl = '';
     if(screen.width<575){
-        $('.badges').hide();
-        $('.tags').show();
-    }
-    else{
-        $('.badges').show();
-        $('.tags').hide();
+        //$('#index').css("background-image", "url(" + window.location.hostname + "/assets/img/Banner_Novil.webp)");
     }
 }
 
