@@ -142,7 +142,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     pointer-events: none;
 
 }
-#light-nav{padding-top: 100vh;}
+#light_nav{padding-top: 100vh;}
 #services{background-color: #f8f9fa; min-height: 100vh;}
 #projects,#us{background-color: #fff;}
 .grid-filter-wrap{overflow-x: auto; max-width: 100%;}
