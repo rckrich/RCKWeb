@@ -23,7 +23,7 @@
 									</div>
 								</div>
 								<div class="card-body text-center">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<h3 class="card-title text-center mt-3 mb-4">{{__('landing.services.videogame.title')}}</h3>
 									</div>
 									<span class="card-subtitle">{{__('landing.services.videogame.description')}}</span>
@@ -36,7 +36,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('assets/icons/videogame-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.videogame.title')}}</h3>
 									</div>
 									<ul class="mb-2 text-white">
@@ -58,7 +58,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
-									<div class="col-12 mx-0 px-0 align-self-start">										
+									<div class="col-12 mx-0 px-0 align-self-start">
 										<img src="{{asset('assets/icons/mobile.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
@@ -76,7 +76,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('assets/icons/mobile-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.mobile.title')}}</h3>
 									</div>
 									<ul class="mb-2 text-white">
@@ -98,7 +98,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<img src="{{asset('assets/icons/webapp.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
@@ -116,7 +116,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('assets/icons/webapp-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.webapp.title')}}</h3>
 									</div>
 									<ul class="mb-2 text-white">
@@ -139,7 +139,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<img src="{{asset('assets/icons/design.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
@@ -157,7 +157,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('assets/icons/design-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.design.title')}}</h3>
 									</div>
 									<ul class="mb-2 text-white">
@@ -179,7 +179,7 @@
 						<div class="flip-card-inner">
 							<div class="card bg-transparent border-0">
 								<div class="card-header text-center">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<img src="{{asset('assets/icons/ar.png')}}" class="mx-auto" height="60" width="60" alt="icon">
 									</div>
 								</div>
@@ -197,7 +197,7 @@
 							<div class="card bg-transparent border-0">
 								<div class="card-body">
 									<img src="{{asset('assets/icons/ar-w.png')}}" class="mx-auto mb-2" height="45" width="45" alt="icon">
-									<div class="col-12 mx-0 px-0">										
+									<div class="col-12 mx-0 px-0">
 										<h3 class="card-title text-center mt-2 mb-3">{{__('landing.services.ar.title')}}</h3>
 									</div>
 									<ul class="mb-2 text-white">
@@ -211,7 +211,7 @@
 					</div>
 				</div>
 			</div>
-	
+
 		</div>
 	</section>
 
@@ -232,18 +232,18 @@
 			<article class="portfolio-item col-lg-3 col-md-4 col-sm-4 col-6 p-0 {{$project->tags}}">
 				<div class="grid-inner">
 					<a href="{{ route('projects.showp', $project) }}">
-						<img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100 h-100"> 
+						<img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100 h-100">
 					</a>
 					<div class="bg-overlay">
 						<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
 							<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-								<h3><a href="{{ route('projects.showp', $project) }}" target=”_blank”>{{$project->name}}</a></h3>
+								<h3><a href="{{ route('projects.showp', $project) }}" target="_blank">{{$project->name}}</a></h3>
 							</div>
 						</div>
 						<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
 					</div>
 				</div>
-			</article>  
+			</article>
 
 		@endforeach
 		</div>
@@ -253,12 +253,12 @@
 		<div class="title py-5 bg-white"><h3>{{$texts->firstWhere('textname', 'section_clients_title')['description'];}}</h3></div>
 		<div class="row mx-0 px-0">
 			<div class="section m-0" style="">
-				<div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel carousel-widget owl-loaded owl-drag" 
-				data-margin="0" data-nav="false" data-pagi="false" data-loop="true" data-autoplay="3000" data-items-xs="2" 
+				<div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel carousel-widget owl-loaded owl-drag"
+				data-margin="0" data-nav="false" data-pagi="false" data-loop="true" data-autoplay="3000" data-items-xs="2"
 				data-items-sm="3" data-items-md="5" data-items-lg="5" data-items-xl="5">
 					<div class="owl-stage-outer">
 						<div class="owl-stage" style="transform: translate3d(-1738px, 0px, 0px); transition: all 0.25s ease 0s; width: 5215px;">
-							
+
 						@foreach ($clients as $client)
 							<div class="owl-item" style="width: 347.6px;">
 								<div class="oc-item">
@@ -266,7 +266,7 @@
 										<img src="{{asset($client->img_url) }}" class="client-img mx-auto" width="320" height="220" alt="Brands">
 									</a>
 								</div>
-							</div>              
+							</div>
 						@endforeach
 
 						</div>
@@ -277,11 +277,11 @@
 					</div>
 					<div class="owl-dots disabled"></div>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</section>
-	
-	<section id="us" class="row px-0 mx-0 align-items-center">                
+
+	<section id="us" class="row px-0 mx-0 align-items-center">
 		<div class="container mw-lg p-5">
 			<div class="title pb-5"><h1>{{$texts->firstWhere('textname', 'section_us_title')['description'];}}</h1></div>
 			<p class="py-2 text">{{$texts->firstWhere('textname', 'us_text_1')['description'];}}</p>
