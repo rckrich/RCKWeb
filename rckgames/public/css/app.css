@@ -144,7 +144,8 @@ footer{border-top: solid 0.5px #EFEFEF;}
 }
 #light_nav{padding-top: 100vh;}
 #services{background-color: #f8f9fa; min-height: 100vh;}
-#projects,#us,#clients{background-color: #fff;}
+#projects,#us{background-color: #fff;}
+#clients{background-color: #F8F9FA}
 .grid-filter-wrap{overflow-x: auto; max-width: 100%;}
 #us,#contact{min-height: 100vh;}
 #contact,footer{background-color: #000!important; color: #fff!important;}
