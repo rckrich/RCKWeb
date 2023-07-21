@@ -25,10 +25,6 @@ $(document).ready(function () {
 
 });
 
-
-
-
-
 function toggleLink (routeID) {
     $(".nav-link.active").removeClass("active");
     $(".nav-item.active").removeClass("active");
