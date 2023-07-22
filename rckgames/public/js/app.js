@@ -1,7 +1,7 @@
 //import './bootstrap';
 
 $(document).ready(function () {
-    handleURL();
+    //handleURL();
     handleTags();
 
     window.addEventListener('hashchange', function() { handleURL();});

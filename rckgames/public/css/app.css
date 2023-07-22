@@ -21,7 +21,7 @@
     left: -2px;
     position: absolute;
 }
-.icon-angle-RIGHT{
+.icon-angle-right{
     top: -1px;
     left: 0px;
     position: absolute;
@@ -92,6 +92,9 @@ h3,p{font-size: 20px;}
     line-height: 30px ;
     text-align: justify;}
 .quote{text-align: center;}
+
+/*#services>.owl-carousel .owl-stage{height: 540px;}*/
+.flip-card{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 .flip-card-front .card-title{
     height: 3rem;
 }
