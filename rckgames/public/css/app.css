@@ -126,7 +126,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
 
 /*LANDING*/
 #index{
-    background: url('../assets/img/Banner.png');
+    background: url('../assets/img/Banner.webp');
     background-position: center!important;
     background-size: cover!important;
     -o-background-size:cover;
@@ -135,7 +135,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     /*background-attachment:fixed!important;*/
     background-repeat: no-repeat!important;
     /*height: 100vh!important;*/
-    position: fixed;
+    position: absolute;
     top: 0px;
     bottom: 0px;
     left: 0px;
@@ -257,18 +257,19 @@ footer{border-top: solid 0.5px #EFEFEF;}
 
 @media screen and (max-width: 860px){
     #index{
-        background: url('../assets/img/Banner_Movil.png') no-repeat;
+        background: url('../assets/img/Banner_Movil.webp') no-repeat;
     }
 }
 @media only screen and (max-device-width: 860px){
     #index{
-        background: url('../assets/img/Banner_Movil.png') no-repeat;
+        background: url('../assets/img/Banner_Movil.webp') no-repeat;
     }
 }
 
 @media screen and (max-width: 767px){
     .be-solid-white{border-right: none;}
-
+    #social-media{display: none; visibility: hidden;}
+    
     h1{font-size: 25px!important;}
     #contact .text,#us .text {font-size: 14px!important;}
 

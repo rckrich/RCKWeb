@@ -312,11 +312,11 @@
 					<p class="text">{{$texts->firstWhere('textname', 'contact_email')['description'];}}</p>
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-12 px-5 py-lg-0 py-sm-3 py-xs-3">
+			<div id="social-media" class="col-lg-6 col-md-6 col-sm-12 col-12 px-5 py-lg-0 py-sm-3 py-xs-3">
 				<img class="icon-contact" src="{{asset('assets/icons/World@1x.png')}}" height="35" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'social_net_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'social_net_text')['description'];}}</p>
-				<div id="social-media" class="row mt-5">
+				<div  class="row mt-5">
 					<div class="col-1 me-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}" target=”_blank”>
 							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
