@@ -234,6 +234,16 @@
 					<a href="{{ route('projects.showp', $project) }}" target="_blank">
 						<img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100 h-100">
 					</a>
+					<a href="{{ route('projects.showp', $project) }}" target="_blank">
+						<div class="bg-overlay">
+							<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
+								<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+
+								</div>
+							</div>
+							<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
+						</div>
+					</a>
 					<!--div class="bg-overlay">
 						<div class="bg-overlay-content dark flex-column" data-hover-animate="fadeIn">
 							<div class="portfolio-desc pt-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
@@ -306,7 +316,7 @@
 				<img class="icon-contact" src="{{asset('assets/icons/World@1x.png')}}" height="35" width="35"/>
 				<p class="subtitle mt-5">{{$texts->firstWhere('textname', 'social_net_title')['description'];}}</p>
 				<p class="text">{{$texts->firstWhere('textname', 'social_net_text')['description'];}}</p>
-				<!--div class="row mt-5">
+				<div id="social-media" class="row mt-5">
 					<div class="col-1 me-3 my-auto">
 						<a href="{{$info->firstWhere('fieldname', 'facebook')['value'];}}" target=”_blank”>
 							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'facebook')['img_url']);}}" height="42" width="42"/>
@@ -322,7 +332,7 @@
 							<img class="icon-social" src="{{asset($info->firstWhere('fieldname', 'instagram')['img_url']);}}" height="42" width="42"/>
 						</a>
 					</div>
-				</div-->
+				</div>
 			</div>
 		</div>
 	</div>

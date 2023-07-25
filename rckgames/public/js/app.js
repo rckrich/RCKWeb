@@ -1,7 +1,7 @@
 //import './bootstrap';
 
 $(document).ready(function () {
-    //handleURL();
+    handleURL();
     handleTags();
 
     window.addEventListener('hashchange', function() { handleURL();});
@@ -22,6 +22,9 @@ $(document).ready(function () {
         $(this).parent().addClass("active");
         bsCollapse.hide()
     });   
+    $(".flip-card-back").on("click", function(){
+        alert('click detected')
+    });
 
 });
 

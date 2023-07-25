@@ -94,7 +94,7 @@ h3,p{font-size: 20px;}
 .quote{text-align: center;}
 
 /*#services>.owl-carousel .owl-stage{height: 540px;}*/
-.flip-card{box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+.flip-card-front,.flip-card-back {box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 .flip-card-front .card-title{
     height: 3rem;
 }
@@ -134,7 +134,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     -webkit-background-size:cover;
     /*background-attachment:fixed!important;*/
     background-repeat: no-repeat!important;
-    height: 100vh!important;
+    /*height: 100vh!important;*/
     position: fixed;
     top: 0px;
     bottom: 0px;
@@ -145,7 +145,8 @@ footer{border-top: solid 0.5px #EFEFEF;}
     pointer-events: none;
 
 }
-#light_nav{padding-top: 100vh;}
+#dark_nav{min-height: 100vh!important;}
+#light_nav{/*padding-top: 100vh;*/}
 #services{background-color: #f8f9fa; min-height: 100vh;}
 #projects,#us{background-color: #fff;}
 #clients{background-color: #F8F9FA}
@@ -281,7 +282,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
 }
 
 @media screen and (max-width: 575px){
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
@@ -302,7 +303,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     and (device-width: 375px)
     and (device-height: 812px)
     and (-webkit-device-pixel-ratio: 3) {
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
@@ -323,7 +324,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     and (device-width: 390px)
     and (device-height: 844px)
     and (-webkit-device-pixel-ratio: 3)  {
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
@@ -344,7 +345,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     and (device-width: 428px)
     and (device-height: 926px)
     and (-webkit-device-pixel-ratio: 3)  {
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
@@ -365,7 +366,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     and (device-width: 414px)
     and (device-height: 896px)
     and (-webkit-device-pixel-ratio: 2) {
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
@@ -386,7 +387,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     and (device-width: 375px)
     and (device-height: 812px)
     and (-webkit-device-pixel-ratio: 3){
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
@@ -407,7 +408,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
     and (device-width: 414px)
     and (device-height: 896px)
     and (-webkit-device-pixel-ratio: 3){
-    #project-filters{display: none; visibility: hidden;}
+    #project-filters,#social-media{display: none; visibility: hidden;}
     .py-xs-3 {padding-top: 1rem!important;padding-bottom: 1rem!important;}
     #services .title, #projects .title {padding-top: 5rem!important;}
     .title.pb-5{padding: 0 0 1rem 0!important;}
