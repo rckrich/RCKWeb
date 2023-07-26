@@ -94,6 +94,11 @@ h3,p{font-size: 20px;}
 .quote{text-align: center;}
 
 /*#services>.owl-carousel .owl-stage{height: 540px;}*/
+#services .owl-stage-outer {
+    height: 600px!important;
+    align-items: center;
+    display: grid;
+}
 .flip-card-front,.flip-card-back {box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 .flip-card-front .card-title{
     height: 3rem;
@@ -102,6 +107,10 @@ h3,p{font-size: 20px;}
     font-size: 16px;
     color: #fff;
 }
+/*.flip-card-back:hover + .flip-card-front> .flip-card-inner {
+   display: none; visibility: hidden;
+}*/
+
 .card-subtitle{
     font-size: 16px !important;
     font-weight: 400 ;

@@ -22,9 +22,27 @@ $(document).ready(function () {
         $(this).parent().addClass("active");
         bsCollapse.hide()
     });   
-    $(".flip-card-back").on("click", function(){
-        alert('click detected')
+
+    $("#flip-videogame .flip-card-back").on("click", function(){
+        //alert($(this).get( 0 ).classList)
+        $(this).css("-webkit-transform","rotateY(180deg)")
+        $(this).css("transform","rotateY(180deg)")
+        $(this).css("-webkit-transform-style","preserve-3d")
+        $(this).css("transform-style","preserve-3d")
+        $(this).parent("flip-card-front").css("display","block")
+    }   
+    );    
+    $("#flip-mobile .flip-card-back").hover(function(){
+        $(this).parent(".flip-card .flip-card-front .flip-card-inner").css("display","none")
     });
+    $("#flip-mobile .flip-card-front").hover(function(){
+        $(this).parent(".flip-card .flip-card-back .flip-card-inner").css("display","none")
+    });
+    //$("#flip-videogame .flip-card-back").on("click", function(){$(this).parent().parent().get( 0 ).removeClass("active")});
+    //$("#flip-mobile .flip-card-back").on("click", function(){alert('click detected mobile')});
+    //$("#flip-webapp .flip-card-back").on("click", function(){alert('click detected webapp')});
+    //$("#flip-design .flip-card-back").on("click", function(){alert('click detected design')});
+    //$("#flip-ar .flip-card-back").on("click", function(){alert('click detected ar')});
 
 });
 
