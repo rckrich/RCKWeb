@@ -1,8 +1,8 @@
 //import './bootstrap';
 
 $(document).ready(function () {
-    handleURL();
-    handleTags();
+    //handleURL();
+    //handleTags();
 
     window.addEventListener('hashchange', function() { handleURL();});
     window.addEventListener('popstate', function() {handleURL();});
@@ -65,12 +65,12 @@ function handleURL () {
         window.addEventListener('scroll', scrollHandler)
     }
 }
-function handleTags(){
+/*function handleTags(){
     imageUrl = '';
     if(screen.width<575){
-        //$('#index').css("background-image", "url(" + window.location.hostname + "/assets/img/Banner_Novil.webp)");
+        $('#index').css("background-image", "url(" + window.location.hostname + "/assets/img/Banner_Novil.webp)");
     }
-}
+}*/
 
 const scrollHandler = () => {
 

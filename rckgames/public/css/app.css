@@ -107,9 +107,14 @@ h3,p{font-size: 20px;}
     font-size: 16px;
     color: #fff;
 }
-/*.flip-card-back:hover + .flip-card-front> .flip-card-inner {
-   display: none; visibility: hidden;
-}*/
+
+.flip-card-back .flip-card-inner, .flip-card:hover .flip-card-front .flip-card-inner{
+    display: none; visibility: hidden;
+}
+.flip-card-front .flip-card-inner,
+.flip-card:hover .flip-card-back .flip-card-inner {
+    display: block; visibility: visible;
+}
 
 .card-subtitle{
     font-size: 16px !important;
