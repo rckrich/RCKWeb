@@ -3,7 +3,7 @@
 $(document).ready(function () {
     //handleURL();
     //handleTags();
-
+    deviceType();
     window.addEventListener('hashchange', function() { handleURL();});
     window.addEventListener('popstate', function() {handleURL();});
     
@@ -21,28 +21,7 @@ $(document).ready(function () {
         $(this).addClass("active");
         $(this).parent().addClass("active");
         bsCollapse.hide()
-    });   
-
-    $("#flip-videogame .flip-card-back").on("click", function(){
-        //alert($(this).get( 0 ).classList)
-        $(this).css("-webkit-transform","rotateY(180deg)")
-        $(this).css("transform","rotateY(180deg)")
-        $(this).css("-webkit-transform-style","preserve-3d")
-        $(this).css("transform-style","preserve-3d")
-        $(this).parent("flip-card-front").css("display","block")
-    }   
-    );    
-    $("#flip-mobile .flip-card-back").hover(function(){
-        $(this).parent(".flip-card .flip-card-front .flip-card-inner").css("display","none")
-    });
-    $("#flip-mobile .flip-card-front").hover(function(){
-        $(this).parent(".flip-card .flip-card-back .flip-card-inner").css("display","none")
-    });
-    //$("#flip-videogame .flip-card-back").on("click", function(){$(this).parent().parent().get( 0 ).removeClass("active")});
-    //$("#flip-mobile .flip-card-back").on("click", function(){alert('click detected mobile')});
-    //$("#flip-webapp .flip-card-back").on("click", function(){alert('click detected webapp')});
-    //$("#flip-design .flip-card-back").on("click", function(){alert('click detected design')});
-    //$("#flip-ar .flip-card-back").on("click", function(){alert('click detected ar')});
+    });  
 
 });
 
@@ -111,5 +90,24 @@ const scrollHandler = () => {
     } 
     //element.scroll({left: element.offsetLeft, behavior: 'smooth'})
 }
+
+const deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        $("#services-sm").css("display","block");
+        $("#services-sm").css("visibility","visible");
+        $("#services-lg").css("display","none");
+        $("#services-lg").css("visibility","hidden");
+        //alert("tablet");
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        $("#services-sm").css("display","block");
+        $("#services-sm").css("visibility","visible");
+        $("#services-lg").css("display","none");
+        $("#services-lg").css("visibility","hidden");
+        //alert("mobile");
+    }
+    //alert("desktop");
+};
 
 

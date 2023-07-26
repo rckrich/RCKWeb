@@ -8,10 +8,10 @@
 </section>
 <section id="light_nav">
 	<section id="services" class="row px-0 mx-0 align-items-center">
-		<div class="container mw-xl pb-5 px-lg-5 px-5" style="overflow:hidden">
+		<div class="container mw-xl pb-5 px-lg-5 px-md-5 px-sm-4 px-4" style="overflow:hidden">
 			<div class="title pb-5"><h1>{{$texts->firstWhere('textname', 'section_services_title')['description'];}}</h1></div>
 
-			<div class="owl-carousel image-carousel carousel-widget flip-card-wrapper clearfix" data-margin="20" data-nav="true" data-pagi="true" data-items-xs="1" data-items-sm="1" data-items-md="2" data-items-lg="3" data-items-xl="4" style="overflow: visible;">
+			<div id="services-lg" class="owl-carousel image-carousel carousel-widget flip-card-wrapper clearfix" data-margin="20" data-nav="true" data-pagi="true" data-items-xs="1" data-items-sm="1" data-items-md="2" data-items-lg="3" data-items-xl="4" style="overflow: visible;">
 
 				<div id="flip-videogame" class="flip-card">
 					<div class="flip-card-front bg-white">
@@ -211,6 +211,104 @@
 					</div>
 				</div>
 			</div>
+
+			<div id="services-sm">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+						<div class="row b-circle m-auto">
+							<div class="row px-0 circle m-auto">
+								<img src="{{asset('assets/icons/videogame-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+							</div>
+						</div>
+						<div class="col-12 mx-0 px-0">
+							<h3 class="text-center my-3">{{__('landing.services.videogame.title')}}</h3>
+						</div>
+						<ul class="col-12 mb-2">
+							<li>{{__('landing.services.videogame.desc_1')}}</li>
+							<li>{{__('landing.services.videogame.desc_2')}}</li>
+							<li>{{__('landing.services.videogame.desc_3')}}</li>
+							<li>{{__('landing.services.videogame.desc_4')}}</li>
+							<li>{{__('landing.services.videogame.desc_5')}}</li>
+							<li>{{__('landing.services.videogame.desc_6')}}</li>
+							<li>{{__('landing.services.videogame.desc_7')}}</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+						<div class="row b-circle m-auto">
+							<div class="row px-0 circle m-auto">
+								<img src="{{asset('assets/icons/mobile-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+							</div>
+						</div>
+						<div class="col-12 mx-0 px-0">
+							<h3 class="text-center my-3">{{__('landing.services.mobile.title')}}</h3>
+						</div>
+						<ul class="col-12 mb-2">
+							<li>{{__('landing.services.mobile.desc_1')}}</li>
+							<li>{{__('landing.services.mobile.desc_2')}}</li>
+							<li>{{__('landing.services.mobile.desc_3')}}</li>
+							<li>{{__('landing.services.mobile.desc_4')}}</li>
+							<li>{{__('landing.services.mobile.desc_5')}}</li>
+							<li>{{__('landing.services.mobile.desc_6')}}</li>
+							<li>{{__('landing.services.mobile.desc_7')}}</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+						<div class="row b-circle m-auto">
+							<div class="row px-0 circle m-auto">
+								<img src="{{asset('assets/icons/webapp-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+							</div>
+						</div>
+						<div class="col-12 mx-0 px-0">
+							<h3 class="text-center my-3">{{__('landing.services.webapp.title')}}</h3>
+						</div>
+						<ul class="col-12 mb-2">
+							<li>{{__('landing.services.webapp.desc_1')}}</li>
+							<li>{{__('landing.services.webapp.desc_2')}}</li>
+							<li>{{__('landing.services.webapp.desc_3')}}</li>
+							<li>{{__('landing.services.webapp.desc_4')}}</li>
+							<!--li>{{__('landing.services.webapp.desc_5')}}</li-->
+							<li>{{__('landing.services.webapp.desc_6')}}</li>
+							<li>{{__('landing.services.webapp.desc_7')}}</li>
+							<li>{{__('landing.services.webapp.desc_8')}}</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+						<div class="row b-circle m-auto">
+							<div class="row px-0 circle m-auto">
+								<img src="{{asset('assets/icons/design-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+							</div>
+						</div>
+						<div class="col-12 mx-0 px-0">
+							<h3 class="text-center my-3">{{__('landing.services.design.title')}}</h3>
+						</div>
+						<ul class="col-12 mb-2">
+							<li>{{__('landing.services.design.desc_1')}}</li>
+							<li>{{__('landing.services.design.desc_2')}}</li>
+							<li>{{__('landing.services.design.desc_3')}}</li>
+							<li>{{__('landing.services.design.desc_4')}}</li>
+							<li>{{__('landing.services.design.desc_5')}}</li>
+							<li>{{__('landing.services.design.desc_6')}}</li>
+							<li>{{__('landing.services.design.desc_7')}}</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+						<div class="row b-circle m-auto">
+							<div class="row px-0 circle m-auto">
+								<img src="{{asset('assets/icons/ar-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+							</div>
+						</div>
+						<div class="col-12 mx-0 px-0">
+							<h3 class="text-center my-3">{{__('landing.services.ar.title')}}</h3>
+						</div>
+						<ul class="col-12 mb-2">
+							<li>{{__('landing.services.ar.desc_1')}}</li>
+							<li>{{__('landing.services.ar.desc_2')}}</li>
+							<li>{{__('landing.services.ar.desc_3')}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
 
 		</div>
 	</section>

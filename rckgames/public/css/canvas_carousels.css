@@ -609,7 +609,7 @@
 .flip-card-back { background-color: #666; }
 
 .flip-card:hover .flip-card-front,
-.flip-card:hover .flip-card-back {
+.flip-card:hover .flip-card-back{
 	-webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 	transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 	-o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -670,14 +670,14 @@
 }
 
 .flip-card-front,
-.flip-card:hover .flip-card-back {
+.flip-card:hover .flip-card-back{
 	-webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-front {
+.flip-card:hover .flip-card-front{
 	-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 	-webkit-transform-style: preserve-3d;
