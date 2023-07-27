@@ -4,8 +4,8 @@ $(document).ready(function () {
     //handleURL();
     //handleTags();
     deviceType();
-    window.addEventListener('hashchange', function() { handleURL();});
-    window.addEventListener('popstate', function() {handleURL();});
+    //window.addEventListener('hashchange', function() { handleURL();});
+    //window.addEventListener('popstate', function() {handleURL();});
     
     window.addEventListener("resize", function() {handleTags();});
     
