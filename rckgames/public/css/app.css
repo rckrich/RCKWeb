@@ -143,15 +143,16 @@ h3,p{font-size: 20px;}
     border-radius: 100px;
 }
 .b-circle{
-    height: 85px;
-    width: 85px;
+    height: 125px;
+    width: 125px;
     border: solid 1px #000;
 }
 .circle{
-    height: 75px;
-    width: 75px;    
+    height: 113px;
+    width: 113px;    
     background-color: #000;
 }
+.circle img{width: 75%; height:auto}
 footer{border-top: solid 0.5px #EFEFEF;}
 
 
@@ -338,6 +339,11 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .badges{display: none; visibility: hidden;}
     .tags{display: block; visibility: visible;}
 }
+@media screen and (max-width: 400px){
+    .col-xs-12{flex: 0 0 auto; width: 100%;}
+    .col-xs-10{flex: 0 0 auto;width: 83.33333333%;}
+}
+
 /* 2340x1080 pixels at 476ppi  --iPhone 13 mini*/
 @media only screen
     and (device-width: 375px)

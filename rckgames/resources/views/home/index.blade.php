@@ -214,16 +214,16 @@
 
 			<div id="services-sm">
 				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-12 p-3">
 						<div class="row b-circle m-auto">
 							<div class="row px-0 circle m-auto">
-								<img src="{{asset('assets/icons/videogame-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+								<img src="{{asset('assets/icons/videogame-w.png')}}" class="mx-auto my-auto" alt="icon">
 							</div>
 						</div>
-						<div class="col-12 mx-0 px-0">
+						<div class="col-12 mx-0 px-0 pt-3">
 							<h3 class="text-center my-3">{{__('landing.services.videogame.title')}}</h3>
 						</div>
-						<ul class="col-12 mb-2">
+						<ul class="col-lg-12 col-md-12 col-sm-10 col-8 col-xs-12 mx-auto mb-2">
 							<li>{{__('landing.services.videogame.desc_1')}}</li>
 							<li>{{__('landing.services.videogame.desc_2')}}</li>
 							<li>{{__('landing.services.videogame.desc_3')}}</li>
@@ -233,16 +233,16 @@
 							<li>{{__('landing.services.videogame.desc_7')}}</li>
 						</ul>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-12 p-3">
 						<div class="row b-circle m-auto">
 							<div class="row px-0 circle m-auto">
-								<img src="{{asset('assets/icons/mobile-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+								<img src="{{asset('assets/icons/mobile-w.png')}}" class="mx-auto my-auto" alt="icon">
 							</div>
 						</div>
-						<div class="col-12 mx-0 px-0">
+						<div class="col-12 mx-0 px-0 pt-3">
 							<h3 class="text-center my-3">{{__('landing.services.mobile.title')}}</h3>
 						</div>
-						<ul class="col-12 mb-2">
+						<ul class="col-lg-12 col-md-12 col-sm-10 col-8 col-xs-12 mx-auto mb-2">
 							<li>{{__('landing.services.mobile.desc_1')}}</li>
 							<li>{{__('landing.services.mobile.desc_2')}}</li>
 							<li>{{__('landing.services.mobile.desc_3')}}</li>
@@ -252,16 +252,16 @@
 							<li>{{__('landing.services.mobile.desc_7')}}</li>
 						</ul>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-12 p-3">
 						<div class="row b-circle m-auto">
 							<div class="row px-0 circle m-auto">
-								<img src="{{asset('assets/icons/webapp-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+								<img src="{{asset('assets/icons/webapp-w.png')}}" class="mx-auto my-auto" alt="icon">
 							</div>
 						</div>
-						<div class="col-12 mx-0 px-0">
+						<div class="col-12 mx-0 px-0 pt-3">
 							<h3 class="text-center my-3">{{__('landing.services.webapp.title')}}</h3>
 						</div>
-						<ul class="col-12 mb-2">
+						<ul class="col-lg-12 col-md-12 col-sm-10 col-8 col-xs-12 mx-auto mb-2">
 							<li>{{__('landing.services.webapp.desc_1')}}</li>
 							<li>{{__('landing.services.webapp.desc_2')}}</li>
 							<li>{{__('landing.services.webapp.desc_3')}}</li>
@@ -272,16 +272,16 @@
 							<li>{{__('landing.services.webapp.desc_8')}}</li>
 						</ul>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-12 p-3">
 						<div class="row b-circle m-auto">
 							<div class="row px-0 circle m-auto">
-								<img src="{{asset('assets/icons/design-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+								<img src="{{asset('assets/icons/design-w.png')}}" class="mx-auto my-auto" alt="icon">
 							</div>
 						</div>
-						<div class="col-12 mx-0 px-0">
+						<div class="col-12 mx-0 px-0 pt-3">
 							<h3 class="text-center my-3">{{__('landing.services.design.title')}}</h3>
 						</div>
-						<ul class="col-12 mb-2">
+						<ul class="col-lg-10 col-md-10 col-sm-8 col-6 col-xs-10 mx-auto mb-2">
 							<li>{{__('landing.services.design.desc_1')}}</li>
 							<li>{{__('landing.services.design.desc_2')}}</li>
 							<li>{{__('landing.services.design.desc_3')}}</li>
@@ -291,16 +291,16 @@
 							<li>{{__('landing.services.design.desc_7')}}</li>
 						</ul>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-12 p-3">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-12 p-3">
 						<div class="row b-circle m-auto">
 							<div class="row px-0 circle m-auto">
-								<img src="{{asset('assets/icons/ar-w.png')}}" class="mx-auto my-auto" height="45" width="45" alt="icon">
+								<img src="{{asset('assets/icons/ar-w.png')}}" class="mx-auto my-auto" alt="icon">
 							</div>
 						</div>
-						<div class="col-12 mx-0 px-0">
+						<div class="col-12 mx-0 px-0 pt-3">
 							<h3 class="text-center my-3">{{__('landing.services.ar.title')}}</h3>
 						</div>
-						<ul class="col-12 mb-2">
+						<ul class="col-lg-12 col-md-12 col-sm-10 col-8 col-xs-12 mx-auto mb-2">
 							<li>{{__('landing.services.ar.desc_1')}}</li>
 							<li>{{__('landing.services.ar.desc_2')}}</li>
 							<li>{{__('landing.services.ar.desc_3')}}</li>
