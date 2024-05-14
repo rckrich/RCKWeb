@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Livewire::setScriptRoute(function ($handle) {
+    return Route::get('/qa/livewire/livewire.js', $handle);
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
