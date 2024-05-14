@@ -21,32 +21,33 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-])->group(function () {
+])->prefix('admin')
+    ->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin/dashboard');
     })->name('dashboard');
 
     Route::get('/projects', function () {
-        return view('projects');
-    })->name('projects');
+        return view('admin/projects');
+    })->name('admin-projects');
 
     Route::get('/projects/{id}', function () {
-        return view('project');
-    })->name('project');
+        return view('admin/project');
+    })->name('admin-project');
 
     Route::get('/clients', function () {
-        return view('clients');
-    })->name('clients');
+        return view('admin/clients');
+    })->name('admin-clients');
 
     Route::get('/types', function () {
-        return view('types');
-    })->name('types');
+        return view('admin/types');
+    })->name('admin-types');
 
     Route::get('/texts', function () {
-        return view('texts');
-    })->name('texts');
+        return view('admin/texts');
+    })->name('admin-texts');
 
     Route::get('/contact', function () {
-        return view('contact');
-    })->name('contact');
+        return view('admin/contact');
+    })->name('admin-contact');
 });

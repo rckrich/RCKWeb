@@ -115,7 +115,7 @@
                     </div>
                 </td>
                 <td class="px-3 py-4 text-right">
-                    <x-link-button href="{{ route('project', $element->id) }}" wire:loading.attr="disabled" class="mr-2">
+                    <x-link-button href="{{ route('admin-project', $element->id) }}" wire:loading.attr="disabled" class="mr-2">
                         Ver
                     </x-link-button>
 

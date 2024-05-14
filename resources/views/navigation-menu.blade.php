@@ -12,22 +12,19 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
+                    <x-nav-link href="{{ route('admin-projects') }}" :active="request()->routeIs('admin-projects')">
                         {{ __('Proyectos') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('clients') }}" :active="request()->routeIs('clients')">
+                    <x-nav-link href="{{ route('admin-clients') }}" :active="request()->routeIs('admin-clients')">
                         {{ __('Clientes') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('types') }}" :active="request()->routeIs('types')">
+                    <x-nav-link href="{{ route('admin-types') }}" :active="request()->routeIs('admin-types')">
                         {{ __('Tipos de proyecto') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('texts') }}" :active="request()->routeIs('texts')">
+                    <x-nav-link href="{{ route('admin-texts') }}" :active="request()->routeIs('admin-texts')">
                         {{ __('Textos de contenido') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                    <x-nav-link href="{{ route('admin-contact') }}" :active="request()->routeIs('admin-contact')">
                         {{ __('Info de contacto') }}
                     </x-nav-link>
                 </div>
@@ -154,22 +151,19 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
+            <x-responsive-nav-link href="{{ route('admin-projects') }}" :active="request()->routeIs('admin-projects')">
                 {{ __('Proyectos') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('clients') }}" :active="request()->routeIs('clients')">
+            <x-responsive-nav-link href="{{ route('admin-clients') }}" :active="request()->routeIs('admin-clients')">
                 {{ __('Clientes') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('types') }}" :active="request()->routeIs('types')">
+            <x-responsive-nav-link href="{{ route('admin-types') }}" :active="request()->routeIs('types')">
                 {{ __('Tipos de proyecto') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('texts') }}" :active="request()->routeIs('texts')">
+            <x-responsive-nav-link href="{{ route('admin-texts') }}" :active="request()->routeIs('admin-texts')">
                 {{ __('Textos de contenido') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+            <x-responsive-nav-link href="{{ route('admin-contact') }}" :active="request()->routeIs('admin-contact')">
                 {{ __('Info de contacto') }}
             </x-responsive-nav-link>
         </div>
