@@ -15,6 +15,21 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
+                        {{ __('Proyectos') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('clients') }}" :active="request()->routeIs('clients')">
+                        {{ __('Clientes') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('types') }}" :active="request()->routeIs('types')">
+                        {{ __('Tipos de proyecto') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('texts') }}" :active="request()->routeIs('texts')">
+                        {{ __('Textos de contenido') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                        {{ __('Info de contacto') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -141,6 +156,21 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
+                {{ __('Proyectos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('clients') }}" :active="request()->routeIs('clients')">
+                {{ __('Clientes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('types') }}" :active="request()->routeIs('types')">
+                {{ __('Tipos de proyecto') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('texts') }}" :active="request()->routeIs('texts')">
+                {{ __('Textos de contenido') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                {{ __('Info de contacto') }}
             </x-responsive-nav-link>
         </div>
 
