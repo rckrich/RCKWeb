@@ -13,6 +13,7 @@ class Clients extends Component
 
     public $element;
 
+    public $name;
     public $image;
 
     public $uploadIteration = 0;
@@ -21,6 +22,7 @@ class Clients extends Component
     public $confirmingAddition = false;
 
     protected $rules = [
+        'name' => 'required|string|min:1',
         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
     ];
     public function render()
@@ -45,7 +47,8 @@ class Clients extends Component
 
     public function confirmAddition()
     {
-        $this->reset(['element', 'image']);
+        $this->reset(['element', 'name', 'image']);
+        $this->name = null;
         $this->image = null;
         $this->confirmingAddition = true;
     }
@@ -53,6 +56,7 @@ class Clients extends Component
     public function confirmEdition(Client $element)
     {
         $this->element = $element;
+        $this->name = $element->name;
         $this->image = null;
         $this->confirmingAddition = true;
     }
@@ -71,6 +75,7 @@ class Clients extends Component
             $this->validate();
         } else {
             $this->validate([
+                'name' => 'required|string|min:1',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1073741824',
             ]);
         }
@@ -86,6 +91,7 @@ class Clients extends Component
             }
             $element->img_url = $this->image->store('clients', 'public');
         }
+        $element->name = $this->name;
         $element->save();
 
         $this->uploadIteration++;
