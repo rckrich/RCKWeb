@@ -38,6 +38,9 @@
                     ID
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Imagen
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -53,6 +56,15 @@
                         <div class="text-center space-y-2 sm:text-left">
                             <div class="px-3">
                                 {{$element->id}}
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="py-2 px-2 max-w-sm mx-auto bg-white space-y-2 sm:py-2 sm:flex  sm:ml-0 sm:items-center sm:space-y-0 sm:space-x-6">
+                        <div class="text-center space-y-2 sm:text-left">
+                            <div class="px-3">
+                                {{$element->name}}
                             </div>
                         </div>
                     </div>
@@ -94,6 +106,12 @@
         </x-slot>
 
         <x-slot name="content">
+            <div class="col-span-6 sm:col-span-4 mb-4">
+                <x-label for="name" value="Nombre" />
+                <x-input id="name" type="text" class="mt-1 block w-full" wire:model="name" />
+                <x-input-error for="name" class="mt-2" />
+            </div>
+
             <div class="col-span-6 sm:col-span-4 mb-4">
                 <x-label for="image" value="Imagen" />
                 @if (isset($this->image) || isset($this->element->img_url))
