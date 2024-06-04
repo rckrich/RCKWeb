@@ -93,7 +93,7 @@
         </div>
     </footer>
 
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/appHome.js')}}"></script>
     <script src="{{asset('js/functions.js')}}"></script>
     <script src="{{asset('js/plugins.min.js')}}"></script>
     <script>
