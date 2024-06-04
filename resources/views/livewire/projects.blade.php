@@ -190,7 +190,11 @@
 
             <div class="col-span-6 sm:col-span-4 mb-4">
                 <x-label for="creation_date" value="Fecha de creación" />
-                <x-datetimepicker id="creation_date" type="text" class="mt-1 block w-full" wire:model="creation_date"/>
+                <x-datetimepicker id="creation_date"
+                                  type="text"
+                                  class="mt-1 block w-full"
+                                  wire:model="creation_date"
+                                  options="{ enableTime: false, noCalendar: false, dateFormat: 'Y-m-d', locale: 'es', altInput: true, altFormat: 'd/F/Y', defaultDate: '{{$creation_date}}' }"/>
                 <x-input-error for="creation_date" class="mt-2" />
             </div>
         </x-slot>
