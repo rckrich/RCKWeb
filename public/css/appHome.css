@@ -34,8 +34,8 @@
     height: var(--owl-nav-sizes);
     border-radius: 100px;
 }
-.icon-angle-left{background: url('public/assets/icons/back.png') no-repeat;}
-.icon-angle-right{background: url('public/assets/icons/next.png') no-repeat;}
+.icon-angle-left{background: url('/assets/icons/back.png') no-repeat;}
+.icon-angle-right{background: url('/assets/icons/next.png') no-repeat;}
 button.owl-prev,button.owl-next{border: solid 1px #000!important;background-color: #fff;}
 
 body{
@@ -297,12 +297,12 @@ footer{border-top: solid 0.5px #EFEFEF;}
 
 @media screen and (max-width: 860px){
     #index{
-        background: url('public/assets/img/Banner_Movil.webp') no-repeat;
+        background: url('/assets/img/Banner_Movil.webp') no-repeat;
     }
 }
 @media only screen and (max-device-width: 860px){
     #index{
-        background: url('public/assets/img/Banner_Movil.webp') no-repeat;
+        background: url('/assets/img/Banner_Movil.webp') no-repeat;
     }
 }
 
