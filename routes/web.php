@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 
@@ -14,9 +15,14 @@ use Livewire\Livewire;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LandingController::class, 'index'])->name('home');
+Route::get('/#index', [LandingController::class, 'index'])->name('home.index');
+Route::get('/#services', [LandingController::class, 'index'])->name('home.services');
+Route::get('/#projects', [LandingController::class, 'index'])->name('home.projects');
+Route::get('/#clients', [LandingController::class, 'index'])->name('home.clients');
+Route::get('/#us', [LandingController::class, 'index'])->name('home.us');
+Route::get('/#contact', [LandingController::class, 'index'])->name('home.contact');
+Route::get('/projects/{project}', [LandingController::class, 'show_project'])->name('projects.show');
 
 Livewire::setScriptRoute(function ($handle) {
     return Route::get('/qa/livewire/livewire.js', $handle);
@@ -28,7 +34,7 @@ Route::middleware([
     'verified',
 ])->prefix('admin')
     ->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return view('admin/dashboard');
     })->name('dashboard');
 
