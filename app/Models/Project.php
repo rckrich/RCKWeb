@@ -39,16 +39,18 @@ class Project extends Model
         return $this->hasMany(Gallery::class);
     }
 
-
-/*
-    public function projectTypes()
-    {
-        return $this->hasMany(ProjectType::class);
-    }
-    */
-
     public function types(): BelongsToMany
     {
         return $this->belongsToMany(Type::class, 'project_types', 'project_id', 'swtype_id');
+    }
+
+    public function links()
+    {
+        return $this->hasMany(ProjectLink::class, );
+    }
+
+    public function videos()
+    {
+        return $this->hasMany(ProjectVideo::class);
     }
 }
