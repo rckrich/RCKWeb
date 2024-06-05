@@ -223,7 +223,7 @@
 
         <x-slot name="content">
             <div class="col-span-6 sm:col-span-4 mb-4">
-                <x-label for="video" value="URL" />
+                <x-label for="video" value="ID de Vimeo" />
                 <x-input id="video" type="text" class="mt-1 block w-full" wire:model="video" />
                 <x-input-error for="video" class="mt-2" />
             </div>
