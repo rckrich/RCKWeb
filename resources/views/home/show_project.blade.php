@@ -78,8 +78,8 @@
         <h2 class="px-0">{{__('landing.videos.title')}}</h2>
         <div class="row mx-0 px-0 py-5">
             @foreach($videos as $video)
-            <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0">
-                <div >
+            <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0 grid-item" >
+                <div>
                         <iframe src="https://player.vimeo.com/video/{{$video->url}}"
                                 frameborder="0"
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
@@ -98,7 +98,7 @@
         <div class="row mx-0 px-0 py-2">
             @foreach($links as $link)
             <div class="col-lg-12 col-md-12 col-sm-12 col-12 px-0 py-1 m-0">
-                <a class="grid-item" href="{{asset($link->url) }}" data-lightbox="gallery-item" >
+                <a class="grid-item" href="{{asset($link->url) }}" >
                     {{$link->text}}
                 </a>
             </div>
