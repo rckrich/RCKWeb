@@ -35,7 +35,7 @@ Route::middleware([
 ])->prefix('admin')
     ->group(function () {
     Route::get('/', function () {
-        return view('admin/dashboard');
+        return view('admin/projects');
     })->name('dashboard');
 
     Route::get('/projects', function () {
