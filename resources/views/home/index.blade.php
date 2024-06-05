@@ -330,7 +330,7 @@
 			<article class="portfolio-item col-lg-3 col-md-4 col-sm-4 col-6 p-0 {{$project->tags}}">
 				<div class="grid-inner">
 					<a href="{{ route('projects.show', $project) }}" target="_blank">
-						<img src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100 h-100">
+						<img src="{{asset($project->banner_image_url) }}" alt="Banner Image" class="w-100 h-100">
 					</a>
 					<a href="{{ route('projects.show', $project) }}" target="_blank">
 						<div class="bg-overlay">
@@ -371,7 +371,7 @@
 							<div class="owl-item" style="width: 347.6px;">
 								<div class="oc-item">
 									<a href="#">
-										<img src="{{asset($client->img_url) }}" class="client-img mx-auto" width="320" height="220" alt="Brands">
+										<img src="{{asset($client->image_url) }}" class="client-img mx-auto" width="320" height="220" alt="Brands">
 									</a>
 								</div>
 							</div>

@@ -7,12 +7,12 @@
 <div class="container mw-xl">
     <div class="row ">
         <div class="col-lg-5 col-md-12 col-sm-12 col-12 p-4">
-            <img id="project-banner" src="{{asset($project->banner_img_url) }}" alt="Banner Image" class="w-100">
+            <img id="project-banner" src="{{asset($project->banner_image_url) }}" alt="Banner Image" class="w-100">
         </div>
         <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-4">
             <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-3 col-4">
-                    <img id="project-icon" src="{{asset($project->icon_url) }}" alt="Icon Image" class="w-100">
+                    <img id="project-icon" src="{{asset($project->icon_image_url) }}" alt="Icon Image" class="w-100">
                 </div>
                 <div class="col">
                     <div class="col-12 my-0">
@@ -52,15 +52,15 @@
             @foreach($galleries as $gallery)
             <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0">
                 @if(Str::endsWith($gallery->img_url, ['.jpg', '.jpeg', '.png', '.gif','.webp','.svg']))
-                <a class="grid-item" href="{{asset($gallery->img_url) }}" data-lightbox="gallery-item" >
-                    <img src="{{asset($gallery->img_url) }}" alt="Gallery Image" class="gallery-img w-100 h-100" />
+                <a class="grid-item" href="{{asset($gallery->image_url) }}" data-lightbox="gallery-item" >
+                    <img src="{{asset($gallery->image_url) }}" alt="Gallery Image" class="gallery-img w-100 h-100" />
                 </a>
                 @elseif(Str::endsWith($gallery->img_url, ['.mp4', '.mov', '.avi', '.mkv','.mpeg','.wmv','.flv']))
-                <a class="grid-item" href="{{asset($gallery->img_url) }}" data-lightbox="iframe" >
+                <a class="grid-item" href="{{asset($gallery->image_url) }}" data-lightbox="iframe" >
                     <!--img src="{{asset($gallery->img_url) }}" alt="Youtube Video" style="box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.15); border-radius: 6px;">
                     <i class="bi-play" style="position: absolute; top: 50%; left: 50%; font-size: 60px; color: #FFF; margin-top: -45px; margin-left: -23px"></i-->
                     <video  class="gallery-img w-100 h-100">
-                        <source src="{{ asset($gallery->img_url)}}" type="video/mp4">
+                        <source src="{{ asset($gallery->image_url)}}" type="video/mp4">
                         <!-- Add additional <source> tags for other video formats if needed -->
                         Your browser does not support the video tag.
                     </video>
