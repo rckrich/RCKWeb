@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-6 py-4">
                     <div class="py-2 px-2 max-w-sm mx-auto bg-white space-y-2 sm:py-2 sm:flex  sm:ml-0 sm:items-center sm:space-y-0 sm:space-x-6">
                         <div class="text-center space-y-2 sm:text-left">
                             <div class="px-3">
