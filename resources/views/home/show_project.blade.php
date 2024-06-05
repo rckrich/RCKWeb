@@ -51,7 +51,7 @@
             @if(count($galleries) > 0)
             @foreach($galleries as $gallery)
             <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0">
-                @if(Str::endsWith($gallery->img_url, ['.jpg', '.jpeg', '.png', '.gif','.webp','.svg']))
+                @if(Str::endsWith($gallery->image_url, ['.jpg', '.jpeg', '.png', '.gif','.webp','.svg']))
                 <a class="grid-item" href="{{asset($gallery->image_url) }}" data-lightbox="gallery-item" >
                     <img src="{{asset($gallery->image_url) }}" alt="Gallery Image" class="gallery-img w-100 h-100" />
                 </a>
