@@ -40,9 +40,12 @@ class Clients extends Component
         session()->flash('message', 'El elemento se ha agregado exitosamente');
     }
 
-    public function confirmDeletion($id)
+    public function confirmDeletion(Client $element)
     {
-        $this->confirmingDeletion = $id;
+        $this->reset(['element', 'name', 'image']);
+        $this->element = $element;
+        $this->name = $element->name;
+        $this->confirmingDeletion = true;
     }
 
     public function confirmAddition()
@@ -61,8 +64,9 @@ class Clients extends Component
         $this->confirmingAddition = true;
     }
 
-    public function deletion(Client $element)
+    public function deletion()
     {
+        $element = $this->element;
         Storage::disk('public')->delete($element->img_url);
         $element->delete();
         $this->confirmingDeletion = false;

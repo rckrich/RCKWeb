@@ -40,9 +40,12 @@ class Types extends Component
         $this->confirmingAddition = true;
     }
 
-    public function confirmDeletion($id)
+    public function confirmDeletion(Type $element)
     {
-        $this->confirmingDeletion = $id;
+        $this->reset(['element', 'name']);
+        $this->element = $element;
+        $this->name = $element->name;
+        $this->confirmingDeletion = true;
     }
 
     public function confirmEdition(Type $element)
@@ -59,8 +62,9 @@ class Types extends Component
         $this->confirmingDetail = true;
     }
 
-    public function deletion(Type $element)
+    public function deletion()
     {
+        $element = $this->element;
         $element->delete();
         $this->confirmingDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');

@@ -50,9 +50,12 @@ class Projects extends Component
         session()->flash('message', 'El elemento se ha agregado exitosamente');
     }
 
-    public function confirmDeletion($id)
+    public function confirmDeletion(Project $element)
     {
-        $this->confirmingDeletion = $id;
+        $this->reset(['element', 'name', 'description', 'banner_image', 'icon_image', 'creation_date']);
+        $this->element = $element;
+        $this->name = $element->name;
+        $this->confirmingDeletion = true;
     }
 
     public function confirmAddition()
@@ -85,8 +88,9 @@ class Projects extends Component
         $this->confirmingDetail = true;
     }
 
-    public function deletion(Project $element)
+    public function deletion()
     {
+        $element = $this->element;
         Storage::disk('public')->delete($element->banner_img_url);
         Storage::disk('public')->delete($element->icon_url);
         $element->galleries()->delete();

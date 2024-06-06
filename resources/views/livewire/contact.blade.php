@@ -198,7 +198,9 @@
         </x-slot>
 
         <x-slot name="content">
-            ¿Estás seguro de eliminar este elemento?
+            @if(isset($element))
+            ¿Estás seguro de eliminar la info de contacto de "{{$fieldname}}"?
+            @endif
         </x-slot>
 
         <x-slot name="footer">
@@ -206,7 +208,7 @@
                 Cancelar
             </x-secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="deletion({{ $confirmingDeletion }})" wire:loading.attr="disabled">
+            <x-danger-button class="ml-2" wire:click="deletion()" wire:loading.attr="disabled">
                 Eliminar
             </x-danger-button>
         </x-slot>

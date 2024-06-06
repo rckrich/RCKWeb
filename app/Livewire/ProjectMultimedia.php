@@ -51,24 +51,35 @@ class ProjectMultimedia extends Component
         session()->flash('message', 'El elemento se ha agregado exitosamente');
     }
 
-    public function confirmImageDeletion($id)
+    public function confirmImageDeletion(Gallery $element)
     {
-        $this->confirmingImageDeletion = $id;
+        $this->reset(['element']);
+        $this->element = $element;
+        $this->confirmingImageDeletion = true;
     }
 
-    public function confirmTagDeletion($id)
+    public function confirmTagDeletion(Type $element)
     {
-        $this->confirmingTagDeletion = $id;
+        $this->reset(['element', 'tag']);
+        $this->element = $element;
+        $this->tag = $element->name;
+        $this->confirmingTagDeletion = true;
     }
 
-    public function confirmLinkDeletion($id)
+    public function confirmLinkDeletion(ProjectLink $element)
     {
-        $this->confirmingLinkDeletion = $id;
+        $this->reset(['element', 'text']);
+        $this->element = $element;
+        $this->text = $element->text;
+        $this->confirmingLinkDeletion = true;
     }
 
-    public function confirmVideoDeletion($id)
+    public function confirmVideoDeletion(ProjectVideo $element)
     {
-        $this->confirmingVideoDeletion = $id;
+        $this->reset(['element', 'video']);
+        $this->element = $element;
+        $this->video = $element->url;
+        $this->confirmingVideoDeletion = true;
     }
 
     public function confirmImageAddition()
@@ -115,8 +126,9 @@ class ProjectMultimedia extends Component
         $this->confirmingVideoAddition = true;
     }
 
-    public function imageDeletion(Gallery $element)
+    public function imageDeletion()
     {
+        $element = $this->element;
         Storage::disk('public')->delete($element->img_url);
         $element->delete();
         $this->confirmingImageDeletion = false;
@@ -138,8 +150,9 @@ class ProjectMultimedia extends Component
         $this->confirmingImageAddition = false;
     }
 
-    public function tagDeletion(Type $element)
+    public function tagDeletion()
     {
+        $element = $this->element;
         $this->project->types()->detach($element->id);
         $this->confirmingTagDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
@@ -152,8 +165,9 @@ class ProjectMultimedia extends Component
         $this->confirmingTagAddition = false;
     }
 
-    public function linkDeletion(ProjectLink $element)
+    public function linkDeletion()
     {
+        $element = $this->element;
         $element->delete();
         $this->confirmingLinkDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
@@ -174,8 +188,9 @@ class ProjectMultimedia extends Component
         $this->confirmingLinkAddition = false;
     }
 
-    public function videoDeletion(ProjectVideo $element)
+    public function videoDeletion()
     {
+        $element = $this->element;
         $element->delete();
         $this->confirmingVideoDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');

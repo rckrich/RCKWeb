@@ -44,9 +44,12 @@ class Contact extends Component
         session()->flash('message', 'El elemento se ha agregado exitosamente');
     }
 
-    public function confirmDeletion($id)
+    public function confirmDeletion(RckInfo $element)
     {
-        $this->confirmingDeletion = $id;
+        $this->reset(['element', 'fieldname', 'value', 'image']);
+        $this->element = $element;
+        $this->fieldname = $element->fieldname;
+        $this->confirmingDeletion = true;
     }
 
     public function confirmAddition()
@@ -74,8 +77,9 @@ class Contact extends Component
         $this->confirmingDetail = true;
     }
 
-    public function deletion(RckInfo $element)
+    public function deletion()
     {
+        $element = $this->element;
         Storage::disk('public')->delete($element->img_url);
         $element->delete();
         $this->confirmingDeletion = false;

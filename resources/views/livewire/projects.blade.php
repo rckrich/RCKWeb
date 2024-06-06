@@ -99,10 +99,9 @@
                         Editar
                     </x-link-button>
 
-                    <x-link-button href="{{ route('admin-project-multimedia', $element->id) }}/multimedia" wire:loading.attr="disabled" class="mr-1 text-xs">
+                    <x-link-button href="{{ route('admin-project-multimedia', $element->id) }}" wire:loading.attr="disabled" class="mr-1 text-xs">
                         Editar multimedia
                     </x-link-button>
-
 
                     <x-danger-button wire:click="confirmDeletion({{ $element->id }})" wire:loading.attr="disabled">
                         Eliminar
@@ -197,7 +196,9 @@
         </x-slot>
 
         <x-slot name="content">
-            ¿Estás seguro de eliminar este elemento?
+            @if(isset($element))
+            ¿Estás seguro de eliminar el proyecto "{{$name}}"?
+            @endif
         </x-slot>
 
         <x-slot name="footer">
@@ -205,7 +206,7 @@
                 Cancelar
             </x-secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="deletion({{ $confirmingDeletion }})" wire:loading.attr="disabled">
+            <x-danger-button class="ml-2" wire:click="deletion()" wire:loading.attr="disabled">
                 Eliminar
             </x-danger-button>
         </x-slot>

@@ -255,7 +255,7 @@
                 Cancelar
             </x-secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="imageDeletion({{ $confirmingImageDeletion }})" wire:loading.attr="disabled">
+            <x-danger-button class="ml-2" wire:click="imageDeletion()" wire:loading.attr="disabled">
                 Eliminar
             </x-danger-button>
         </x-slot>
@@ -267,7 +267,9 @@
         </x-slot>
 
         <x-slot name="content">
-            ¿Estás seguro de eliminar este elemento?
+            @if(isset($element))
+            ¿Estás seguro de eliminar el tipo de proyecto "{{$tag}}"?
+            @endif
         </x-slot>
 
         <x-slot name="footer">
@@ -275,7 +277,7 @@
                 Cancelar
             </x-secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="tagDeletion({{ $confirmingTagDeletion }})" wire:loading.attr="disabled">
+            <x-danger-button class="ml-2" wire:click="tagDeletion()" wire:loading.attr="disabled">
                 Eliminar
             </x-danger-button>
         </x-slot>
@@ -287,7 +289,9 @@
         </x-slot>
 
         <x-slot name="content">
-            ¿Estás seguro de eliminar este elemento?
+            @if(isset($element))
+            ¿Estás seguro de eliminar el tipo de proyecto "{{$text}}"?
+            @endif
         </x-slot>
 
         <x-slot name="footer">
@@ -295,7 +299,7 @@
                 Cancelar
             </x-secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="linkDeletion({{ $confirmingLinkDeletion }})" wire:loading.attr="disabled">
+            <x-danger-button class="ml-2" wire:click="linkDeletion()" wire:loading.attr="disabled">
                 Eliminar
             </x-danger-button>
         </x-slot>
@@ -307,7 +311,9 @@
         </x-slot>
 
         <x-slot name="content">
-            ¿Estás seguro de eliminar este elemento?
+            @if(isset($element))
+            ¿Estás seguro de eliminar el video "{{$element->url}}"?
+            @endif
         </x-slot>
 
         <x-slot name="footer">
@@ -315,7 +321,7 @@
                 Cancelar
             </x-secondary-button>
 
-            <x-danger-button class="ml-2" wire:click="videoDeletion({{ $confirmingVideoDeletion }})" wire:loading.attr="disabled">
+            <x-danger-button class="ml-2" wire:click="videoDeletion()" wire:loading.attr="disabled">
                 Eliminar
             </x-danger-button>
         </x-slot>
