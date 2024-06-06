@@ -38,7 +38,7 @@
                     ID
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Banner
+                    Nombre
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Ícono
@@ -76,15 +76,6 @@
                     <div class="py-2 px-2 max-w-sm mx-auto bg-white space-y-2 sm:py-2 sm:flex  sm:ml-0 sm:items-center sm:space-y-0 sm:space-x-6">
                         <div class="text-center space-y-2 sm:text-left">
                             <div class="px-3">
-                                <img src="{{asset($element->banner_image_url) }}" alt="Info Image" class="img-thumbnail" width="80">
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="py-2 px-2 max-w-sm mx-auto bg-white space-y-2 sm:py-2 sm:flex  sm:ml-0 sm:items-center sm:space-y-0 sm:space-x-6">
-                        <div class="text-center space-y-2 sm:text-left">
-                            <div class="px-3">
                                 <img src="{{asset($element->icon_image_url) }}" alt="Info Image" class="img-thumbnail" width="80">
                             </div>
                         </div>
@@ -100,13 +91,18 @@
                     </div>
                 </td>
                 <td class="px-3 py-4 text-right">
-                    <x-link-button href="{{ route('admin-project', $element->id) }}" wire:loading.attr="disabled" class="mr-2">
+                    <x-link-button href="{{ route('admin-project', $element->id) }}" wire:loading.attr="disabled" class="mr-1 text-xs">
                         Ver
                     </x-link-button>
 
-                    <x-link-button wire:click="confirmEdition({{ $element->id }})" wire:loading.attr="disabled" class="mr-2">
+                    <x-link-button wire:click="confirmEdition({{ $element->id }})" wire:loading.attr="disabled" class="mr-1 text-xs">
                         Editar
                     </x-link-button>
+
+                    <x-link-button wire:click="confirmEdition({{ $element->id }})/multimedia" wire:loading.attr="disabled" class="mr-1 text-xs">
+                        Editar multimedia
+                    </x-link-button>
+
 
                     <x-danger-button wire:click="confirmDeletion({{ $element->id }})" wire:loading.attr="disabled">
                         Eliminar

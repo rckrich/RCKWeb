@@ -46,6 +46,10 @@ Route::middleware([
         return view('admin/project');
     })->name('admin-project');
 
+        Route::get('/projects/{id}/multimedia', function () {
+            return view('admin/project-multimedia');
+        })->name('admin-project-multimedia');
+
     Route::get('/clients', function () {
         return view('admin/clients');
     })->name('admin-clients');
