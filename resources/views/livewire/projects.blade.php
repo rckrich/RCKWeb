@@ -99,7 +99,7 @@
                         Editar
                     </x-link-button>
 
-                    <x-link-button wire:click="confirmEdition({{ $element->id }})/multimedia" wire:loading.attr="disabled" class="mr-1 text-xs">
+                    <x-link-button href="{{ route('admin-project-multimedia', $element->id) }}/multimedia" wire:loading.attr="disabled" class="mr-1 text-xs">
                         Editar multimedia
                     </x-link-button>
 

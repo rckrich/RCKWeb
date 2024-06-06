@@ -79,7 +79,7 @@
                     </div>
                 </td>
                 <td class="px-6 py-4 text-right">
-                    <x-link-button wire:click="confirmEdition({{ $element->id }})" wire:loading.attr="disabled" class="mr-2">
+                    <x-link-button wire:click="confirmEdition({{ $element->id }})" wire:loading.attr="disabled" class="mr-1 text-xs">
                         Editar
                     </x-link-button>
 
