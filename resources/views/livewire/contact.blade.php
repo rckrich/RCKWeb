@@ -25,7 +25,7 @@
     <div class="block mb-8">
         <div class="relative w-1/2 mb-6">
             <x-link-button wire:click="confirmAddition()">
-                Crear
+                Crear info de contacto
             </x-link-button>
         </div>
     </div>
@@ -41,7 +41,7 @@
                     Nombre de la varialbe
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Descripción/Valor
+                    URL
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Imagen/Ícono
@@ -129,7 +129,7 @@
             </div>
 
             <div class="col-span-6 sm:col-span-4 mb-4">
-                <x-label for="value" value="Descripción/Valor" />
+                <x-label for="value" value="URL" />
                 <x-input id="value" type="text" class="mt-1 block w-full" wire:model="value" />
                 <x-input-error for="value" class="mt-2" />
             </div>
@@ -174,7 +174,7 @@
             </div>
 
             <div class="col-span-6 sm:col-span-4 mb-4">
-                <x-label for="value" value="Descripción/Valor" />
+                <x-label for="value" value="URL" />
                 <p>{{$this->element->value}}</p>
             </div>
 

@@ -25,7 +25,7 @@
     <div class="block mb-8">
         <div class="relative w-1/2 mb-6">
             <x-link-button wire:click="confirmAddition()">
-                Crear
+                Crear proyecto
             </x-link-button>
         </div>
     </div>
@@ -36,12 +36,6 @@
             <tr>
                 <th scope="col" class="px-6 py-3">
                     ID
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Nombre
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Descripción
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Banner
@@ -74,15 +68,6 @@
                         <div class="text-center space-y-2 sm:text-left">
                             <div class="px-3">
                                 {{$element->name}}
-                            </div>
-                        </div>
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <div class="py-2 px-2 max-w-sm mx-auto bg-white space-y-2 sm:py-2 sm:flex  sm:ml-0 sm:items-center sm:space-y-0 sm:space-x-6">
-                        <div class="text-center space-y-2 sm:text-left">
-                            <div class="px-3">
-                                {{ mb_strimwidth($element->description, 0, 100, "...") }}
                             </div>
                         </div>
                     </div>

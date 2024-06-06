@@ -26,7 +26,7 @@
     <div class="block mb-8">
         <div class="relative w-1/2 mb-6">
             <x-link-button wire:click="confirmAddition()">
-                Crear
+                Crear texto de  contenido
             </x-link-button>
         </div>
     </div>
@@ -39,7 +39,7 @@
                     ID
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Nombre de la varialbe
+                    Nombre de la variable
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Descripción/Valor
@@ -108,8 +108,8 @@
 
         <x-slot name="content">
             <div class="col-span-6 sm:col-span-4 mb-4">
-                <x-label for="name" value="Nombre de la variable" />
-                <x-input id="name" type="text" class="mt-1 block w-full" wire:model="name" />
+                <x-label for="textname" value="Nombre de la variable" />
+                <x-input id="textname" type="text" class="mt-1 block w-full" wire:model="textname" />
                 <x-input-error for="name" class="mt-2" />
             </div>
 

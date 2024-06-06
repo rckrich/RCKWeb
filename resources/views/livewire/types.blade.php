@@ -26,7 +26,7 @@
     <div class="block mb-8">
         <div class="relative w-1/2 mb-6">
             <x-link-button wire:click="confirmAddition()">
-                Crear
+                Crear tipo de proyecto
             </x-link-button>
         </div>
     </div>
