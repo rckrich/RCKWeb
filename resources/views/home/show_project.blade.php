@@ -47,7 +47,7 @@
     </div>
     <div class="row p-4">
         <h2 class="px-0">{{__('landing.galleries.title')}}</h2>
-        <div class="row mx-0 px-0 pt-5 max-height-gallery">
+        <div class="row mx-0 px-0 py-5 max-height-gallery">
             @if(count($galleries) > 0)
             @foreach($galleries as $gallery)
             <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0">
@@ -76,7 +76,7 @@
     <div class="row p-4">
         @if(count($videos) > 0)
         <h2 class="px-0">{{__('landing.videos.title')}}</h2>
-        <div class="row mx-0 px-0 pt-5 max-height-gallery">
+        <div class="row mx-0 px-0 py-5">
             @foreach($videos as $video)
             <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0 grid-item" >
                 <div>
