@@ -47,7 +47,7 @@
     </div>
     <div class="row p-4">
         <h2 class="px-0">{{__('landing.galleries.title')}}</h2>
-        <div class="row mx-0 px-0 py-5 max-height-gallery">
+        <div class="row mx-0 px-0 pt-5 max-height-gallery">
             @if(count($galleries) > 0)
             @foreach($galleries as $gallery)
             <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0">
@@ -76,17 +76,10 @@
     <div class="row p-4">
         @if(count($videos) > 0)
         <h2 class="px-0">{{__('landing.videos.title')}}</h2>
-        <div class="row mx-0 px-0 py-5">
+        <div class="row mx-0 px-0 pt-5 max-height-gallery">
             @foreach($videos as $video)
             <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0 grid-item" >
-                <div>
-                        <iframe src="https://player.vimeo.com/video/{{$video->url}}"
-                                frameborder="0"
-                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                                title=""></iframe>
-                </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
+                <iframe src="https://player.vimeo.com/video/{{$video->url}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
             @endforeach
         </div>
