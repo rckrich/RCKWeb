@@ -25,11 +25,11 @@
         <div class="row mx-0 col-lg-2 col-md-4 col-sm-4 col-4 be-solid-bnw">
             @if(Auth::check())
             <a class="navbar-brand text-center" href="{{ route('home.index') }}">
-                <img  id="navbarLogo" src="{{asset('assets/img/Wordmark_Negro.png')}}" alt="RCK Logo" height="77" width="77"/>
+                <img  id="navbarLogo" src="{{asset('assets/img/Wordmark_Negro.png')}}" alt="RCK Logo" height="77" />
             </a>
             @else
             <a class="navbar-brand text-center" href="{{ route('home.index') }}">
-                <img  id="navbarLogo" src="{{asset('assets/img/Wordmark_Negro.png')}}" alt="RCK Logo" height="77" width="77"/>
+                <img  id="navbarLogo" src="{{asset('assets/img/Wordmark_Negro.png')}}" alt="RCK Logo" height="77" />
             </a>
             @endif
         </div>
