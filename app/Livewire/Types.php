@@ -3,6 +3,8 @@
 namespace App\Livewire;
 
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 
 class Types extends Component
@@ -66,6 +68,8 @@ class Types extends Component
     {
         $element = $this->element;
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el tipo de proyecto ' . $element->id . ' ' . $element->name);
+
         $this->confirmingDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }

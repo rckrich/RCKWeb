@@ -7,6 +7,8 @@ use App\Models\Project;
 use App\Models\ProjectLink;
 use App\Models\ProjectVideo;
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -131,6 +133,7 @@ class ProjectMultimedia extends Component
         $element = $this->element;
         Storage::disk('public')->delete($element->img_url);
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó la imagen ' . $element->img_url . ' del proyecto ' . $this->project->id . ' ' . $element->name);
         $this->confirmingImageDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }
@@ -154,6 +157,7 @@ class ProjectMultimedia extends Component
     {
         $element = $this->element;
         $this->project->types()->detach($element->id);
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el tag ' . $element->name . ' del proyecto ' . $this->project->id . ' ' . $element->name);
         $this->confirmingTagDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }
@@ -169,6 +173,7 @@ class ProjectMultimedia extends Component
     {
         $element = $this->element;
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el link ' . $element->text . ' ' . $element->url . ' del proyecto ' . $this->project->id . ' ' . $element->name);
         $this->confirmingLinkDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }
@@ -192,6 +197,7 @@ class ProjectMultimedia extends Component
     {
         $element = $this->element;
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el video ' . $element->url . ' del proyecto ' . $this->project->id . ' ' . $element->name);
         $this->confirmingVideoDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }

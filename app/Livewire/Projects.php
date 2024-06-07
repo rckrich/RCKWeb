@@ -3,6 +3,8 @@
 namespace App\Livewire;
 
 use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Storage;
@@ -96,6 +98,7 @@ class Projects extends Component
         $element->galleries()->delete();
         $element->types()->detach();
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el proyecto ' . $element->id . ' ' . $element->name);
         $this->confirmingDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }

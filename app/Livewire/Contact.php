@@ -3,6 +3,8 @@
 namespace App\Livewire;
 
 use App\Models\RckInfo;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Storage;
@@ -82,6 +84,7 @@ class Contact extends Component
         $element = $this->element;
         Storage::disk('public')->delete($element->img_url);
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el contacto ' . $element->id . ' ' . $element->fieldname);
         $this->confirmingDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }

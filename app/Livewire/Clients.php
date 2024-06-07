@@ -3,6 +3,8 @@
 namespace App\Livewire;
 
 use App\Models\Client;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -69,6 +71,7 @@ class Clients extends Component
         $element = $this->element;
         Storage::disk('public')->delete($element->img_url);
         $element->delete();
+        Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó el cliente ' . $element->id . ' ' . $element->name);
         $this->confirmingDeletion = false;
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }
