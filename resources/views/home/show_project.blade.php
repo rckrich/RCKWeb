@@ -78,8 +78,16 @@
         <h2 class="px-0">{{__('landing.videos.title')}}</h2>
         <div class="row mx-0 px-0 pt-5 max-height-gallery">
             @foreach($videos as $video)
-            <div class="col-lg-4 col-md-4 col-sm-6 col-6 p-0 m-0 grid-item" >
-                <iframe src="https://player.vimeo.com/video/{{$video->url}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-6 py-0 px-1 m-0 grid-item">
+                <iframe src="https://player.vimeo.com/video/{{$video->url}}"
+                        width="640" height="360"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-6 py-0 px-1 m-0  grid-item">
+                <iframe src="https://player.vimeo.com/video/{{$video->url}}"
+                        width="640" height="360"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
             @endforeach
         </div>
@@ -90,7 +98,7 @@
         <h2 class="px-0">{{__('landing.links.title')}}</h2>
         <div class="row mx-0 px-0 pt-3">
             @foreach($links as $link)
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12 px-0 py-1 m-0">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0 pr-1 m-0">
                 <a class="grid-item" href="{{asset($link->url) }}" target=”_blank”>
                     {{$link->text}}
                 </a>
