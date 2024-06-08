@@ -282,7 +282,7 @@ footer{border-top: solid 0.5px #EFEFEF;}
 @media only screen and (max-device-width: 991px){
     .navbar,.navbar-brand {height: 70px!important;}
     .pt-nav{padding-top: 70px;}
-    #navbarLogo{height: 60px; width: 60px;}
+    #navbarLogo{height: 55px;}
     .pe-50{padding-right: 0;}
     #navbarNav{padding:30px!important;}
     .pe-50>.me-3, .pe-50>.mx-3{margin-left: auto!important; margin-right: auto!important;}
