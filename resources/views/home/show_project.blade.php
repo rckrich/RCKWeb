@@ -83,12 +83,6 @@
                         width="640" height="360"
                         frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
             </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-6 py-0 px-1 m-0  grid-item">
-                <iframe src="https://player.vimeo.com/video/{{$video->url}}"
-                        width="640" height="360"
-                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
             @endforeach
         </div>
         @endif
