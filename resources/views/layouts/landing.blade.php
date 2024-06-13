@@ -3,10 +3,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FT8Q8K748"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <title>RCKgames</title>
+        gtag('config', 'G-7FT8Q8K748');
+    </script>
+
+    <title>RCK</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="RCK Games" />
+    <meta name="description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual">
+
+    <link rel="icon" href="lti-icon.png"> <!-- PONER NOMBRE DE LA IMAGEN LA CUAL DEBE ESTAR LA CARPETA RAIZ -->
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@rckgames" />
+    <meta name="twitter:title" content="RCK" />
+    <meta name="twitter:description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual" />
+    <meta name="twitter:image" content="{{asset('assets/icons/rck-icono.png')}}" />
+
+    <meta property="og:title" content="RCK" />
+    <meta property="og:description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rckgames.com" />
+    <meta property="og:image" content="{{asset('assets/img/rck-Image-Socials.jpg')}}" />
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{asset('css/appHome.css')}}" type="text/css" >
