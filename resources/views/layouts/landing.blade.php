@@ -27,13 +27,13 @@
     <meta name="twitter:site" content="@rckgames" />
     <meta name="twitter:title" content="RCK" />
     <meta name="twitter:description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual" />
-    <meta name="twitter:image" content="{{asset('assets/img/rck-Image-Socials-1.jpg')}}" />
+    <meta name="twitter:image" content="{{asset('assets/img/rck-Image-Socials.jpg')}}" />
 
     <meta property="og:title" content="RCK" />
     <meta property="og:description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rckgames.com" />
-    <meta property="og:image" content="{{asset('assets/img/rck-Image-Socials-1.jpg')}}" />
+    <meta property="og:image" content="{{asset('assets/img/rck-Image-Socials.jpg')}}" />
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
