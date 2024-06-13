@@ -21,13 +21,13 @@
     <meta name="author" content="RCK Games" />
     <meta name="description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual">
 
-    <link rel="icon" href="lti-icon.png"> <!-- PONER NOMBRE DE LA IMAGEN LA CUAL DEBE ESTAR LA CARPETA RAIZ -->
+    <link rel="icon" href="rck-icon.png"> <!-- PONER NOMBRE DE LA IMAGEN LA CUAL DEBE ESTAR LA CARPETA RAIZ -->
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@rckgames" />
     <meta name="twitter:title" content="RCK" />
     <meta name="twitter:description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual" />
-    <meta name="twitter:image" content="{{asset('assets/icons/rck-icono.png')}}" />
+    <meta name="twitter:image" content="{{asset('assets/img/rck-Image-Socials.jpg')}}" />
 
     <meta property="og:title" content="RCK" />
     <meta property="og:description" content="Desarrollo de software creativo – IA – Videojuegos – Realidad Aumentada – NFT – Realidad Virtual" />
