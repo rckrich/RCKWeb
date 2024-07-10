@@ -19,7 +19,7 @@ class ProjectMultimedia extends Component
 
     public $id;
     public $project;
-    public $image;
+    public $images;
     public $tag;
     public $text;
     public $url;
@@ -86,8 +86,8 @@ class ProjectMultimedia extends Component
 
     public function confirmImageAddition()
     {
-        $this->reset(['element', 'image']);
-        $this->image = null;
+        $this->reset(['element', 'images']);
+        $this->images = null;
         $this->confirmingImageAddition = true;
     }
 
@@ -141,15 +141,18 @@ class ProjectMultimedia extends Component
     public function saveImage()
     {
         $this->validate([
-            'image' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/svg+xml,image/webp,video/mp4,video/quicktime,video/x-msvideo,video/mpeg,video/mov,video/avi|max:1048576',
+            'images' => 'required',
+            'images.*' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/svg+xml,image/webp,video/mp4,video/quicktime,video/x-msvideo,video/mpeg,video/mov,video/avi|max:1048576',
         ]);
 
-        $element = new Gallery();
-        $element->project_id = $this->id;
-        $element->img_url = $this->image->store('gallery', 'public');
-        $element->save();
+        foreach($this->images as $image){
+            $element = new Gallery();
+            $element->project_id = $this->id;
+            $element->img_url = $image->store('gallery', 'public');
+            $element->save();
+            $this->uploadIteration++;
+        }
 
-        $this->uploadIteration++;
         $this->confirmingImageAddition = false;
     }
 
@@ -214,5 +217,11 @@ class ProjectMultimedia extends Component
         $element->save();
 
         $this->confirmingVideoAddition = false;
+    }
+
+    public function updateGalleryOrder($list){
+        foreach($list as $element){
+            Gallery::find($element['value'])->update(['order' => $element['order']]);
+        }
     }
 }

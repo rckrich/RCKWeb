@@ -13,6 +13,7 @@ class Gallery extends Model
     protected $table = 'project_galleries';
 
     protected $fillable = [
+        'order',
         'img_url',
         'project_id'
     ];

@@ -42,7 +42,7 @@ class LandingController extends Controller
     {
         $texts = collect(Text::all());
         $info = RckInfo::all();
-        $galleries = Gallery::where('project_id', $project->id)->get();
+        $galleries = Gallery::where('project_id', $project->id)->orderBy('order', 'ASC')->get();
         $videos = ProjectVideo::where('project_id', $project->id)->get();
         $links = ProjectLink::where('project_id', $project->id)->get();
         $projectTypes = ProjectType::select('project_types.id AS project_type_id','project_types.project_id','sw_types.name')->where('project_id', $project->id)->join('sw_types', 'project_types.swtype_id', '=', 'sw_types.id')->get();

@@ -36,7 +36,7 @@ class Project extends Model
 
     public function galleries()
     {
-        return $this->hasMany(Gallery::class);
+        return $this->hasMany(Gallery::class)->orderBy('order', 'ASC');
     }
 
     public function types(): BelongsToMany

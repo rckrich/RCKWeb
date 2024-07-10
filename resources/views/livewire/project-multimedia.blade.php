@@ -33,10 +33,17 @@
                 Añadir imagen
             </x-link-button>
         </div>
-        <div class="block mt-6 grid grid-cols-8 gap-6">
+        <div class="block mt-6 grid grid-cols-6 gap-6" wire:sortable="updateGalleryOrder">
             @foreach($project->galleries as $gallery)
-            <div class="">
-                <img src="{{asset($gallery->image_url) }}" alt="Info Image" class="img-thumbnail">
+            <div class="px-2" wire:sortable.item="{{ $gallery->id }}" wire:key="gallery-{{ $gallery->id }}">
+                <span wire:sortable.handle>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </span>
+                <img src="{{asset($gallery->image_url) }}" alt="Info Image" class="img-thumbnail pt-1">
                 <x-danger-button class="block mt-1" wire:click="confirmImageDeletion({{ $gallery->id }})" wire:loading.attr="disabled">
                     Eliminar
                 </x-danger-button>
@@ -139,15 +146,17 @@
         <x-slot name="content">
             <div class="col-span-6 sm:col-span-4 mb-4">
                 <x-label for="image" value="Imagen" />
-                @if (isset($this->image))
+                @if (isset($this->images))
                 Vista previa:
-                @if(isset($this->image))
-                <img src="{{$this->image->temporaryUrl() }}">
+                @if(isset($this->images))
+                @foreach($this->images as $image)
+                <img src="{{$image->temporaryUrl() }}">
+                @endforeach
                 @endif
                 @endif
 
-                <input type="file" class="mt-1 block w-full" id="upload-{{ $uploadIteration }}" wire:model="image">
-                <x-input-error for="image" class="mt-2" />
+                <input multiple type="file" class="mt-1 block w-full" id="upload-{{ $uploadIteration }}" wire:model="images">
+                <x-input-error for="images" class="mt-2" />
             </div>
         </x-slot>
 
