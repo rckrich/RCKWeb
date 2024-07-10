@@ -14,6 +14,9 @@ use Livewire\Livewire;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/test/page', function (){
+    dd(phpinfo());
+});
 
 Route::get('/', [LandingController::class, 'index'])->name('home');
 Route::get('/#index', [LandingController::class, 'index'])->name('home.index');
