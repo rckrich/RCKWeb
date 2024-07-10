@@ -135,6 +135,7 @@ class ProjectMultimedia extends Component
         $element->delete();
         Log::channel('deletes')->info(Auth::user()->id . ' ' . Auth::user()->email . ' - eliminó la imagen ' . $element->img_url . ' del proyecto ' . $this->project->id . ' ' . $element->name);
         $this->confirmingImageDeletion = false;
+        $this->refreshGalleryOrder();
         session()->flash('message', 'El elemento se ha eliminado exitosamente');
     }
 
@@ -148,6 +149,7 @@ class ProjectMultimedia extends Component
         foreach($this->images as $image){
             $element = new Gallery();
             $element->project_id = $this->id;
+            $element->order = Gallery::where('project_id', $this->id)->count() + 1;
             $element->img_url = $image->store('gallery', 'public');
             $element->save();
             $this->uploadIteration++;
@@ -219,9 +221,19 @@ class ProjectMultimedia extends Component
         $this->confirmingVideoAddition = false;
     }
 
-    public function updateGalleryOrder($list){
+    public function updateGalleryOrder($list)
+    {
         foreach($list as $element){
             Gallery::find($element['value'])->update(['order' => $element['order']]);
+        }
+    }
+
+    public function refreshGalleryOrder()
+    {
+        $list = Gallery::where('project_id', $this->id)->orderBy('order')->get();
+        $count = 0;
+        foreach($list as $element){
+            Gallery::find($element['id'])->update(['order' => ++$count]);
         }
     }
 }
