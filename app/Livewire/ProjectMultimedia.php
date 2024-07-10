@@ -143,7 +143,7 @@ class ProjectMultimedia extends Component
     {
         $this->validate([
             'images' => 'required',
-            'images.*' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/svg+xml,image/webp,video/mp4,video/quicktime,video/x-msvideo,video/mpeg,video/mov,video/avi|max:1048576',
+            'images.*' => 'required|file|mimetypes:image/jpeg,image/png,image/jpg,image/gif,image/svg+xml,image/webp,video/mp4,video/quicktime,video/x-msvideo,video/mpeg,video/mov,video/avi|max:10000',
         ]);
 
         foreach($this->images as $image){
