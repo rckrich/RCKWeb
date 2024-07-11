@@ -210,6 +210,7 @@
             <div class="col-span-6 sm:col-span-4 mb-4">
                 <x-label for="url" value="URL" />
                 <x-input id="url" type="text" class="mt-1 block w-full" wire:model="url" />
+                <p class="text-gray-500 py-1">Se requiere añadir el URL completo. Ejemplo: https://www.pagina.com</p>
                 <x-input-error for="url" class="mt-2" />
             </div>
         </x-slot>
