@@ -98,6 +98,7 @@
                     <img id="footer-logo" src="{{asset('assets/img/Wordmark_Negro.png')}}" alt="RCK Logo" class="" height="77" width="77"/>
 
                     <p class="my-auto">{{$texts->firstWhere('textname', 'footer_text')['description'];}}</p>
+                    <p class="my-auto"><a target="_blank" href="{{asset('assets/Política de Privacidad - RCK.pdf')}}">Política de Privacidad</a></p>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 align-self-center py-2">
                     <div class="row my-auto pe-50">

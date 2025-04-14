@@ -470,3 +470,12 @@ footer{border-top: solid 0.5px #EFEFEF;}
     .badges{display: none; visibility: hidden;}
     .tags{display: block; visibility: visible;}
 }
+
+
+footer a {
+    color: #fff !important;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
